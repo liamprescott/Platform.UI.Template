@@ -22,7 +22,7 @@
     "postcss-cli": "^2.1.0"
   },
   "scripts": {
-    "css:compile:deploy": "npm run css:compile:main -- --source-map false --output-style compressed",
+    "css:compile:deploy": "npm run css:compile:main -- --output-style compressed",
     "css:compile:dev": "npm run css:compile:main -- --source-map true --output-style expanded",
     "css:compile:main": "node-sass style/scss/main.scss style/css/main.css",
     "css:autoprefix": "postcss --use autoprefixer -c postcss-options.json -o style/css/main.css style/css/main.css",
@@ -30,6 +30,6 @@
     "css:build:dev": "npm run css:compile:dev && npm run css:autoprefix",
     "dev:browsersync": "browser-sync start --files \"style/css/*.css\" --proxy local.Platform.UI.Template",
     "dev:watch:scss": "nodemon -e scss -w style/scss -x \"npm run css:build:dev\"",
-    "development": "parallelshell \"npm run browsersync\" \"npm run dev:watch:scss\""
+    "development": "parallelshell \"npm run dev:browsersync\" \"npm run dev:watch:scss\""
   }
 }

@@ -51,3 +51,13 @@ node_modules/**/*
 # any folder or file prefixed with '--temp-'
 --temp-*.*
 --temp-*/**/*
+
+
+# Web Config #
+######################
+web.config
+
+# CSS Files #
+######################
+# ignore all CSS files as these are generated from Sass
+style/css/**/*
