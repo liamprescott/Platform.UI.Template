@@ -1,0 +1,35 @@
+{
+  "name": "platform.ui.template",
+  "version": "1.0.0",
+  "description": "Template UI project structure",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liamprescott/Platform.UI.Template.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Liam Prescott",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^6.0.1",
+    "browser-sync": "^2.9.1",
+    "node-sass": "^3.3.2",
+    "nodemon": "^1.4.1",
+    "parallelshell": "^2.0.0",
+    "postcss-cli": "^2.1.0"
+  },
+  "scripts": {
+    "css:compile:deploy": "npm run css:compile:main -- --source-map false --output-style compressed",
+    "css:compile:dev": "npm run css:compile:main -- --source-map true --output-style expanded",
+    "css:compile:main": "node-sass style/scss/main.scss style/css/main.css",
+    "css:autoprefix": "postcss --use autoprefixer -c postcss-options.json -o style/css/main.css style/css/main.css",
+    "css:build:deploy": "npm run css:compile:deploy && npm run css:autoprefix",
+    "css:build:dev": "npm run css:compile:dev && npm run css:autoprefix",
+    "dev:browsersync": "browser-sync start --files \"style/css/*.css\" --proxy local.Platform.UI.Template",
+    "dev:watch:scss": "nodemon -e scss -w style/scss -x \"npm run css:build:dev\"",
+    "development": "parallelshell \"npm run browsersync\" \"npm run dev:watch:scss\""
+  }
+}
