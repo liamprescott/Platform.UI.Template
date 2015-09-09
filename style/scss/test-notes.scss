@@ -1,0 +1,158 @@
+
+/**
+ * Index:
+ * - Comments
+ * - Impact of @extend
+ * - General principles
+ * - Variables
+ * - Mixins
+ *   - Simple mixin
+ *   - Mixin with arguments and default values
+ *   - @extend & the impact of @extend
+ *   - Extending a class
+ *   - Extending a Placeholder
+ *   - Placeholders extending other Placeholders
+ */
+
+
+/*------------------------------------*\
+ #COMMENTS
+\*------------------------------------*/
+
+  /*------------------------------------*\
+   #SECTION
+  \*------------------------------------*/
+
+  /**
+   * Comment
+   */
+
+  // Inline comment
+
+
+/*------------------------------------*\
+ #GENERAL PRINCIPLES
+\*------------------------------------*/
+
+/**
+ * Variables:
+ */
+$myVariable: #00cc00;
+
+.abc {
+  color: $myVariable;
+}
+
+/**
+ * Mixins:
+ */
+// Simple mixin:
+@mixin mySimpleMixin {
+  font: {
+    family: Arial;
+    size: 20px;
+    weight: bold;
+  }
+}
+
+.my-class-mixin-1 {
+  @include mySimpleMixin;
+  background-color: #ff0000;
+}
+
+// Mixin with arguments and default values
+@mixin myComplexMixin ($color, $width: 100%){
+  color: $color;
+  width: $width;
+}
+
+.my-class-mixin-2 {
+  @include myComplexMixin(#222);
+}
+
+.my-class-mixin-3 {
+  @include myComplexMixin(#333, 50%);
+}
+
+
+/*------------------------------------*\
+ #@extend & the impact of @extend
+\*------------------------------------*/
+
+/**
+ * Extending a class:
+ */
+.a {
+  color:#ffff00;
+  &:hover{
+    background-color:#ff00ff;
+  }
+}
+.a.b {
+  font-family:sans-serif;
+}
+.a.is-selected {color:pink;}
+
+// Lets extend .a:
+.x { @extend .a; }
+.y { @extend .a; }
+.z { @extend .a; }
+
+// !!! BEWARE !!!
+// Note how every generated selector containing .a is DUPLICATED for EVERY element that extends .a
+
+
+/**
+ * Extending a Placeholder:
+ */
+
+%my-placeholder {
+  color: #ff0000;
+  font {
+    family: sans-serif;
+    size: 2em;
+  }
+}
+
+.my-class {
+  @extend %my-placeholder;
+  font-weight: bold;
+}
+
+
+/**
+ * Placeholder extending other Placeholders:
+ */
+// Parent placeholders
+%parent {
+  font {
+    family: sans-serif;
+    size: 2em;
+  }
+}
+// Child placeholders
+%child-1 {
+  @extend %parent;
+  color: #ff0000;
+}
+%child-2 {
+  @extend %parent;
+  color: #00ff00;
+}
+%child-3 {
+  @extend %parent;
+  color: #0000ff;
+}
+// My classes
+.my-child-1 {
+  @extend %child-1;
+  font-style: itallic;
+}
+.my-child-2 {
+  @extend %child-1;
+  font-weight: bold;
+}
+.my-child-3 {
+  @extend %child-1;
+  text-transform: uppercase;
+}

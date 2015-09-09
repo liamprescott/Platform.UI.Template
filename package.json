@@ -27,8 +27,6 @@
     "css:compile:testbed": "node-sass style/scss/test-bed.scss style/css/test-bed.css --source-map true --output-style expanded",
     "css:compile:main": "node-sass style/scss/main.scss style/css/main.css",
     "css:autoprefix": "postcss --use autoprefixer -c postcss-options.json -o style/css/main.css style/css/main.css",
-
-
     "css:build:deploy": "npm run css:compile:deploy && npm run css:autoprefix",
     "css:build:dev": "npm run css:compile:dev && npm run css:autoprefix",
     "dev:browsersync": "browser-sync start --files \"style/css/*.css\" --proxy local.Platform.UI.Template",

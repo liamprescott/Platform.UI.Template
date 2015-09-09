@@ -1,98 +1,61 @@
 
-.banana {
-  color:#ffff00;
+
+
+/*------------------------------------
+ #BUTTONS
+ ------------------------------------*/
+
+/**
+ * This is the root style and SHOULD NOT be used directly
+ */
+@mixin btn ($padding: 1em) {
+  display: inline-block;
+  padding: $padding;
 }
 
-//.a {
-//  color:#ffff00;
-//  &:hover{
-//    background-color:#ff00ff;
-//  }
-//}
-//.a.b {
-//  font-family:sans-serif;
-//}
-//.a.is-selected {color:pink;}
-//
-//
-//.x { @extend .a; }
-//.y { @extend .a; }
-//.z { @extend .a; }
-//
-//
-//
-//
-//%i_am_not_exported {
-//  color:#ff00ff;
-//}
-//
-//
-//
-///*==============================================*/
-//
-//$myVariable: #00cc00;
-//
-//.abc {
-//  color: $myVariable;
-//}
-//
-///*==============================================*/
-//
-//@mixin mySimpleMixin {
-//    font: {
-//      family: Arial;
-//      size: 20px;
-//      weight: bold;
-//    }
-//  }
-//
-//@mixin myComplexMixin ($color, $width: 100%){
-//  color: $color;
-//  width: $width;
-//}
-//
-//.def {
-//  @include mySimpleMixin;
-//
-//  background-color: #ff0000;
-//}
-//
-//.ghi {
-//  @include myComplexMixin(#222);
-//}
-//
-//.jkl {
-//  @include myComplexMixin(#333, 50%);
-//}
-
-%btn {
-    display: inline-block;
-    padding: 1em;
+/**
+ * Button style mixins
+ * Mix these into style declarations to make them buttons
+ */
+@mixin btn-positive ($padding: 1em) {
+  @include btn($padding);
+  background-color: #333;
+  color: #fff;
 }
 
-%btn-positive {
-    @extend %btn;
-    background-color: green;
-    color: white;
+@mixin btn-negative ($padding: 1em) {
+  @include btn($padding);
+  background-color: #ff0000;
+  color: #fff;
 }
 
-%btn-negative {
-    @extend %btn;
-    background-color: red;
-    color: white;
+@mixin btn-neutral ($padding: 1em) {
+  @include btn($padding);
+  background-color: #ccc;
+  color: #333;
 }
 
-%btn-neutral {
-    @extend %btn;
-    background-color: lightgray;
-    color: black;
+
+/**
+ * Core decorator class names
+ * These class names can be added to HTML elements to make them buttons
+ * NOTE: It is better to mixin the styles
+ */
+.btn-positive {
+  @include btn-positive;
 }
 
+.btn-negative {
+  @include btn-positive;
+}
+.btn-neutral {
+  @include btn-positive;
+}
+
+
+/*------------------------------------
+ #EXAMPLES
+ ------------------------------------*/
 .my-button {
-  @extend %btn-positive;
-}
-
-.my-other-button
-{
-  @extend %btn-negative;
+  @include btn-positive;
 }
