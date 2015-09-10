@@ -1,0 +1,46 @@
+
+
+$colour-black: #000;
+$colour-white: #fff;
+$colour-default: #666;
+
+$color-grey-base: rgb(179,179,179);
+
+
+//
+// Colour variations:
+// - x-dark
+// - dark
+// - mid-dark
+// - base (default)
+// - mid-light
+// - light
+// - x-light
+//
+// Start following then expand:
+// - dark
+// - base
+// - light
+//
+// See: http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+//
+
+$colour-palette: (
+  blue: (
+    base: rgb(61,166,222),
+    light: rgb(103,200,245),
+    dark: rgb(48,120,160)
+  ),
+  grey: (
+    base:  $color-grey-base,
+    x-light: lighten($color-grey-base, 20%),
+    light: lighten($color-grey-base, 10%),
+    dark: darken($color-grey-base, 20%)
+  )
+);
+
+
+// Utility function for looking up the variation of a colour from the colour palette
+@function colour($colour, $variation: 'base') {
+  @return map-get(map-get($colour-palette, $colour), $variation);
+}
