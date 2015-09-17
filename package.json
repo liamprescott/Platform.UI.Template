@@ -24,7 +24,7 @@
   "scripts": {
     "css:compile:deploy": "npm run css:compile:main -- --output-style compressed",
     "css:compile:dev": "npm run css:compile:main -- --source-map true --output-style expanded && npm run css:compile:testbed",
-    "css:compile:testbed": "node-sass style/scss/test-bed.scss style/css/test-bed.css --source-map true --output-style expanded",
+    "css:compile:testbed": "node-sass style/scss/testbed.scss style/css/testbed.css --source-map true --output-style expanded",
     "css:compile:main": "node-sass style/scss/main.scss style/css/main.css",
     "css:autoprefix": "postcss --use autoprefixer -c postcss-options.json -o style/css/main.css style/css/main.css",
     "css:build:deploy": "npm run css:compile:deploy && npm run css:autoprefix",

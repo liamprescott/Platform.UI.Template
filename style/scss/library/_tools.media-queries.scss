@@ -1,0 +1,13 @@
+/*------------------------------------
+  #MEDIA QUERIES
+  ------------------------------------*/
+
+@import 'tools.sizing';
+
+$breakpoints: (
+  "xsmall": em-calc(480),
+  "small" : em-calc(640),
+  "medium" : em-calc(1024),
+  "large"  : em-calc(1440),
+  "xlarge" : em-calc(1920)
+) !default;

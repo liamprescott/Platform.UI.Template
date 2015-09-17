@@ -1,0 +1,46 @@
+
+/*------------------------------------
+  #BUTTON TOOLS
+  ------------------------------------*/
+
+@import 'tools.sizing';
+
+/**
+ * Core button mixins that are used by the ui toolkit buttons and SHOULD NOT be used directly
+ */
+@mixin btn ($padding: 0,
+            $border-style: solid,
+            $border-width: 0,
+            $hover-border-style:0,
+            $hover-border-width: 0){
+  // If border width > 0 then make a btn-border else create a std button
+  @if $border-width > 0 {
+    @include btn-border($padding, $border-width);
+    border: {
+      style: $border-style;
+      width: $border-width;
+    }
+  } @else {
+    @include btn-default($padding);
+  }
+
+  &:hover {
+    // If over border different then re-define
+    @if $hover-border-width != $border-width {
+      padding: padding-calc($padding, $hover-border-width);
+      border-width: $hover-border-width;
+    }
+    @if $hover-border-style != $border-style {
+      border-style: $hover-border-style;
+    }
+  }
+}
+
+@mixin btn-default ($padding: 1em) {
+  display: inline-block;
+  padding: $padding;
+}
+
+@mixin btn-border ($padding: 1em, $border-width: 1px) {
+  @include btn-default(padding-calc($padding, $border-width));
+}

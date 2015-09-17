@@ -1,0 +1,58 @@
+
+
+/*------------------------------------
+  #SIZING TOOLS
+  ------------------------------------*/
+
+
+  $rem-base: 16px !default;
+
+
+
+  /*------------------------------------
+    #UNITS
+    ------------------------------------*/
+
+  ///*
+  // * Simple conversion function for converting a px value to em
+  // */
+  @function em-calc($value, $base-value: $rem-base)
+  {
+    $value: strip-unit($value) / strip-unit($rem-base)  * 1em;
+    @if ($value == 0em) { $value:0; }
+    @return $value;
+  }
+
+  ///* Strip Unit
+  // * It strips the unit of measure and returns it
+  // *
+  // * © Taken from: https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+  // */
+  @function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+  }
+
+
+  /*------------------------------------
+    #PADDING
+    ------------------------------------*/
+
+  ///*
+  // * Callibrate a padding to remove a standard border-width
+  // * NOTE: This is not required if element has defined dimensions (e.g. width: 100px; height:50%;)
+  // * @function calibrate-padding-for-border ($padding: 1em, $border-width: 1px)
+  // */
+  @function padding-calc ($padding: 1em, $border-width: 1px)
+  {
+   $total: length($padding);
+   $calibrated-padding: ();
+
+   @if $total == 1 { $calibrated-padding: (nth($padding, 1) - em-calc($border-width)); }
+   @else {
+     @for $i from 1 through $total {
+       $new-padding: max(0, (nth($padding, $i) - em-calc($border-width))); //Calc and ensure that padding not -ve
+       $calibrated-padding: append($calibrated-padding, $new-padding);
+     }
+   }
+   @return $calibrated-padding;
+  }
