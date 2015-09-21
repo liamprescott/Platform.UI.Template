@@ -1,13 +1,25 @@
 
-/*------------------------------------
-  #BUTTON TOOLS
-  ------------------------------------*/
+///*------------------------------------
+//  #TOOLS : BUTTONS
+//  ------------------------------------*/
 
 @import 'tools.sizing';
 
-/**
- * Core button mixins that are used by the ui toolkit buttons and SHOULD NOT be used directly
- */
+
+///*------------------------------------
+// #BUTTON STYLE PROPERTIES
+// ------------------------------------*/
+// Button defaults
+$button-text-align: center !default;
+
+
+
+///*------------------------------------
+// #Core button mixins that are used by the (UI toolkit) buttons and SHOULD NOT be used directly
+// ------------------------------------*/
+///**
+// * Entry point
+// */
 @mixin btn ($padding: 0,
             $border-style: solid,
             $border-width: 0,
@@ -36,11 +48,20 @@
   }
 }
 
+///**
+// * Default button
+// */
 @mixin btn-default ($padding: 1em) {
   display: inline-block;
   padding: $padding;
+  text-align: $button-text-align;
 }
 
+///**
+// * Default button with a border
+// * @Description: The button padding is auto corrected (calibrated) to remove the border width so
+// * that buttons with & without border are the same size when they have 'natural' (auto) dimensions
+// */
 @mixin btn-border ($padding: 1em, $border-width: 1px) {
   @include btn-default(padding-calc($padding, $border-width));
 }

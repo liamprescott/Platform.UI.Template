@@ -1,0 +1,22 @@
+/*------------------------------------
+  #UTILITIES : CLEARFIX
+  ------------------------------------*/
+
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * - Extend the clearfix class with Sass to avoid the `.clearfix` class appearing over and over in your markup.
+ * - Mixin the clearfix class with Sass to avoid use of decorator class and problems with extension (output position in CSS etc.)
+ */
+
+@mixin u-clearfix {
+ &:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+}
+
+.u-clearfix,
+%u-clearfix {
+  @include u-clearfix;
+}

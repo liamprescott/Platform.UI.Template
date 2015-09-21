@@ -2,12 +2,15 @@
 
 // Settings
 // Tools
+@import 'library/tools.media-queries.scss';
+@import 'library/tools.typography.scss';
 // Generic
 // Base
 // Objects
-@import 'library/_object.toolkit.buttons';
+@import 'library/object.buttons';
 // Components / modules
-// Utilities (Trumps)
+// Utilities
+@import 'library/utilities.clearfix.scss';
 
 
 // SASS COMMENTS
@@ -43,11 +46,54 @@ body{
 }
 
 .my-button-positive {
-  @include btn-positive;
+  @include o-btn-positive;
 }
 .my-button-negative {
-  @include btn-negative;
+  @include o-btn-negative;
 }
 .my-button-neutral {
-  @include btn-neutral;
+  @include o-btn-neutral;
 }
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+.my-media-queried {
+  font-size:10px;
+
+  @include media-query-between () {
+    font-size:12px;
+  }
+
+  @include media-query-between ("small", "large") {
+    font-size:12px;
+  }
+
+  @include media-query-from ("medium") {
+    font-size:14px;
+  }
+
+  @include media-query-upto ("medium") {
+    background-color:yellow;
+  }
+}
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+// Objects
+// Modules / Components
+// Object / Module modes
+// Layout..... spacing related styles....(?)
+
+
+
+//Typography
+//.as-h1,
+//@mixin as-h1 {}
+//.as-h2
+//@mixin as-h2 {}
+//.as-h3
+//@mixin as-h3{}
