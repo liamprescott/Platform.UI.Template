@@ -9,7 +9,12 @@
 - http://html5doctor.com/html5-forms-introduction-and-new-attributes/
 - http://www.broken-links.com/2011/06/16/styling-html5-form-validation-errors/
 
-
+**Flexbox**
+- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- http://www.smashingmagazine.com/2015/03/harnessing-flexbox-for-todays-web-apps/
+- http://www.sketchingwithcss.com/samplechapter/cheatsheet.html
+- https://developer.mozilla.org/en-US/docs/Web/CSS/align-content
 
 ```html
   <!-- ======================================
@@ -69,9 +74,9 @@
     <!-- Ready -->
     <input type="checkbox">
     <input type="email">
-    <input type="file">
+    <input type="file"> <!-- ? -->
     <input type="password">
-    <input type="reset">
+    <input type="reset"> <!-- !Button preferred to input -->
     <input type="radio">
     <input type="search">
     <input type="tel">
@@ -99,11 +104,7 @@
     <label>
       <input type="">
       <span>Label</span>
-      <span>
-        <!--
-        :before
-        :after -->
-      </span>
+      <span><!-- faux --></span>
     </label>
 
 
@@ -111,6 +112,7 @@
     <label>
       <input type="">
       <span>Label</span>
+      <span><!-- faux --></span>
     </label>
 
 
@@ -120,10 +122,12 @@
       <label>
         <input type="">
         <span>Label</span>
+        <span><!-- faux --></span>
       </label>
       <label>
         <input type="">
         <span>Label</span>
+        <span><!-- faux --></span>
       </label>
     </fieldset>
     <!-- OR -->
@@ -133,10 +137,12 @@
         <label>
           <input type="">
           <span>Label</span>
+          <span><!-- faux --></span>
         </label>
         <label>
           <input type="">
           <span>Label</span>
+          <span><!-- faux --></span>
         </label>
       </div>
     </fieldset>
@@ -148,10 +154,12 @@
       <label>
         <input type="" name="rb2">
         <span>Label</span>
+        <span><!-- faux --></span>
       </label>
       <label>
         <input type="" name="rb2">
         <span>Label</span>
+        <span><!-- faux --></span>
       </label>
     <legend>
     <!-- OR -->
@@ -161,13 +169,15 @@
         <label>
           <input type="" name="rb2">
           <span>Label</span>
+          <span><!-- faux --></span>
         </label>
         <label>
           <input type="" name="rb2">
           <span>Label</span>
+          <span><!-- faux --></span>
         </label>
       </div>
-    <legend>
+    <fieldset>
 
     <!-- Select list -->
     <label>
