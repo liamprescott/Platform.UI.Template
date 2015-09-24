@@ -47,16 +47,16 @@ body{
 }
 
 .test-button--positive {
-  @include o-btn--positive;
+  @include o-button--positive;
 }
 .test-button--negative {
-  @include o-btn--negative;
+  @include o-button--negative;
 }
 .test-button--neutral {
-  @include o-btn--neutral;
+  @include o-button--neutral;
 }
 .test-button--naked {
-  @include o-btn--naked;
+  @include o-button--naked;
 }
 
 

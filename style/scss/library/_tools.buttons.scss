@@ -20,20 +20,20 @@ $button-text-align: center !default;
 ///**
 // * Entry point
 // */
-@mixin btn ($padding: 0,
+@mixin button ($padding: 0,
             $border-style: solid,
             $border-width: 0,
             $hover-border-style:0,
             $hover-border-width: 0){
   // If border width > 0 then make a btn-border else create a std button
   @if $border-width > 0 {
-    @include btn-border($padding, $border-width);
+    @include button-border($padding, $border-width);
     border: {
       style: $border-style;
       width: $border-width;
     }
   } @else {
-    @include btn-default($padding);
+    @include button-default($padding);
   }
 
   &:hover {
@@ -51,7 +51,7 @@ $button-text-align: center !default;
 ///**
 // * Default button
 // */
-@mixin btn-default ($padding: 1em) {
+@mixin button-default ($padding: 1em) {
   display: inline-block;
   padding: $padding;
   text-align: $button-text-align;
@@ -62,6 +62,6 @@ $button-text-align: center !default;
 // * @Description: The button padding is auto corrected (calibrated) to remove the border width so
 // * that buttons with & without border are the same size when they have 'natural' (auto) dimensions
 // */
-@mixin btn-border ($padding: 1em, $border-width: 1px) {
-  @include btn-default(padding-calc($padding, $border-width));
+@mixin button-border ($padding: 1em, $border-width: 1px) {
+  @include button-default(padding-calc($padding, $border-width));
 }

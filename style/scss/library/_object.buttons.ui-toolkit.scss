@@ -12,19 +12,19 @@ $output-button-ui-classes: false !default;
 // * Decorator Class names that can be added to HTML elements to make them buttons
 // */
 @if ($output-button-ui-classes) {
-  .o-btn-full {
-    @include o-btn--full;
+  .o-button-full {
+    @include o-button--full;
   }
- .o-btn-positive {
-   @include o-btn--positive;
+ .o-button-positive {
+   @include o-button--positive;
  }
  .o-btn-negative {
-   @include o-btn--negative;
+   @include o-button--negative;
  }
  .o-btn-neutral {
-   @include o-btn--neutral;
+   @include o-button--neutral;
  }
  .o-btn-naked {
-   @include o-btn--naked;
+   @include o-button--naked;
  }
 }

@@ -99,16 +99,16 @@ $button-naked-hover-label-colour:  colour(blue, 'dark') !default;
 //
 //  // Via @include in another Scss declaration (mixin or class)
 //  .my-button-a {
-//    @include btn-positive;
+//    @include o-button-positive;
 //  }
 //  .my-button-b {
-//    @include btn-negative;
+//    @include o-button-negative;
 //  }
 //  .my-button--c {
-//    @include btn-neutral(1em 0.5em);
+//    @include o-button-neutral(1em 0.5em);
 //  }
 //  @mixin my-other-mixin {
-//    @include btn-positive;
+//    @include o-button-positive;
 //  }
 
 
@@ -119,8 +119,8 @@ $button-naked-hover-label-colour:  colour(blue, 'dark') !default;
 // * Mix into Sass to make elements buttons
 // */
 // Positive
-@mixin o-btn--positive ($padding: $button-positive-padding) {
-  @include btn($padding,
+@mixin o-button--positive ($padding: $button-positive-padding) {
+  @include button($padding,
                $button-positive-border-style,
                $button-positive-border-width,
                $button-positive-hover-border-style,
@@ -137,8 +137,8 @@ $button-naked-hover-label-colour:  colour(blue, 'dark') !default;
 }
 
 // Negative
-@mixin o-btn--negative ($padding: $button-negative-padding) {
-  @include btn($padding,
+@mixin o-button--negative ($padding: $button-negative-padding) {
+  @include button($padding,
                $button-negative-border-style,
                $button-negative-border-width,
                $button-negative-hover-border-style,
@@ -155,8 +155,8 @@ $button-naked-hover-label-colour:  colour(blue, 'dark') !default;
 }
 
 // Neutral
-@mixin o-btn--neutral ($padding: $button-neutral-padding) {
-  @include btn($padding,
+@mixin o-button--neutral ($padding: $button-neutral-padding) {
+  @include button($padding,
                $button-neutral-border-style,
                $button-neutral-border-width,
                $button-neutral-hover-border-style,
@@ -172,8 +172,8 @@ $button-naked-hover-label-colour:  colour(blue, 'dark') !default;
   }
 }
 
-@mixin o-btn--naked ($padding: $button-naked-padding) {
-  @include btn($padding,
+@mixin o-button--naked ($padding: $button-naked-padding) {
+  @include button($padding,
                $button-naked-border-style,
                $button-naked-border-width,
                $button-naked-hover-border-style,
@@ -190,7 +190,7 @@ $button-naked-hover-label-colour:  colour(blue, 'dark') !default;
 }
 
 // 100% width
-@mixin o-btn--full () {
+@mixin o-button--full () {
   width:100%;
   text-align: center;
 }
