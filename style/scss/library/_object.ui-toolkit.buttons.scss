@@ -1,0 +1,30 @@
+
+///*------------------------------------
+//  #OBJECT : UI TOOLKIT : BUTTONS
+//  ------------------------------------*/
+@import 'object.buttons';
+
+
+
+$output-button-ui-classes: false !default;
+
+///**
+// * Decorator Class names that can be added to HTML elements to make them buttons
+// */
+@if ($output-button-ui-classes) {
+  .o-btn-full {
+    @include o-btn--full;
+  }
+ .o-btn-positive {
+   @include o-btn--positive;
+ }
+ .o-btn-negative {
+   @include o-btn--negative;
+ }
+ .o-btn-neutral {
+   @include o-btn--neutral;
+ }
+ .o-btn-naked {
+   @include o-btn--naked;
+ }
+}

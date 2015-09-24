@@ -1,0 +1,31 @@
+
+/**
+ * User Search Result
+ */
+
+.c-user-search-result {
+
+  // Image
+  &__image {}
+
+  // Name
+  &__name {}
+
+  // Details
+  &__details {}
+
+    // User name
+    &__username {}
+
+    // Email address
+    &__email {}
+
+    // Locations
+    &__locations {}
+
+      // Location list
+      &__location-list {}
+
+        // Location
+        &__location {}
+}

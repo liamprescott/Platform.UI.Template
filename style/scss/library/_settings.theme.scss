@@ -1,0 +1,63 @@
+
+///*------------------------------------
+//  # RESPONSIVE TYPOGRAPHICAL SCALE
+//  ------------------------------------*/
+
+//$text-default-font-sizes: (); //Body
+//$display-xlarge-font-sizes: (); //h1
+//$display-large-font-sizes: (); //h2
+//$display-medium-font-sizes: (); //h3
+//$display-small-font-sizes: (); //h4
+//$display-xsmall-font-sizes: (); //h5
+//$display-tiny-font-sizes: (); //h6
+
+
+
+///*------------------------------------
+//  # BUTTONS
+//  ------------------------------------*/
+
+// Global
+//$output-button-ui-classes: false;
+//$button-text-align: center;
+
+// Positive button
+//$button-positive-bgnd-colour: colour(blue);
+//$button-positive-border-colour: $colour-transparent;
+//$button-positive-border-style: $default-border-style;
+//$button-positive-border-width: 0;
+//$button-positive-label-colour: $colour-white;
+//$button-positive-padding:1em !default;
+//$button-positive-hover-bgnd-colour: colour(blue, 'dark');
+//$button-positive-hover-border-colour: $button-positive-border-colour;
+//$button-positive-hover-border-style: $default-border-style;
+//$button-positive-hover-border-width: $button-positive-border-width;
+//$button-positive-hover-label-colour: $button-positive-label-colour;
+
+// Negative button
+//$button-negative-bgnd-colour: colour(grey, 'x-light');
+//$button-negative-border-colour: $colour-transparent;
+//$button-negative-border-style: $default-border-style;
+//$button-negative-border-width: 0;
+//$button-negative-label-colour: colour(grey, dark);
+//$button-negative-padding:1em;
+
+//$button-negative-hover-bgnd-colour: colour(grey, 'light');
+//$button-negative-hover-border-colour: $button-negative-border-colour;
+//$button-negative-hover-border-style: $default-border-style;
+//$button-negative-hover-border-width: $button-negative-border-width;
+//$button-negative-hover-label-colour: $button-negative-label-colour;
+
+// Neutral button
+//$button-neutral-bgnd-colour: $colour-transparent;
+//$button-neutral-border-colour: colour(grey, 'light');
+//$button-neutral-border-style: $default-border-style;
+//$button-neutral-border-width: 1px;
+//$button-neutral-label-colour: colour(grey, dark);
+//$button-neutral-padding:1em;
+
+//$button-neutral-hover-bgnd-colour: colour(grey, 'x-light');
+//$button-neutral-hover-border-colour: $button-neutral-border-colour;
+//$button-neutral-hover-border-style: $default-border-style;
+//$button-neutral-hover-border-width: 0;
+//$button-neutral-hover-label-colour: $button-neutral-label-colour;

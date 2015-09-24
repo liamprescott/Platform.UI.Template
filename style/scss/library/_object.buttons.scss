@@ -29,48 +29,63 @@
 ///*------------------------------------
 // #BUTTON STYLE PROPERTIES
 // ------------------------------------*/
+$button-border-style: solid;
 
 // Positive button
 $button-positive-bgnd-colour: colour(blue) !default;
 $button-positive-border-colour: $colour-transparent !default;
-$button-positive-border-style: $default-border-style !default;
+$button-positive-border-style: none !default;
 $button-positive-border-width: 0 !default;
 $button-positive-label-colour: $colour-white !default;
 $button-positive-padding:1em !default;
 
 $button-positive-hover-bgnd-colour: colour(blue, 'dark') !default;
 $button-positive-hover-border-colour: $button-positive-border-colour !default;
-$button-positive-hover-border-style: $default-border-style !default;
+$button-positive-hover-border-style: none !default;
 $button-positive-hover-border-width: $button-positive-border-width !default;
 $button-positive-hover-label-colour: $button-positive-label-colour !default;
 
 // Negative button
 $button-negative-bgnd-colour: colour(grey, 'x-light') !default;
 $button-negative-border-colour: $colour-transparent !default;
-$button-negative-border-style: $default-border-style !default;
+$button-negative-border-style: none !default;
 $button-negative-border-width: 0 !default;
 $button-negative-label-colour: colour(grey, dark) !default;
 $button-negative-padding:1em !default;
 
 $button-negative-hover-bgnd-colour: colour(grey, 'light') !default;
 $button-negative-hover-border-colour: $button-negative-border-colour !default;
-$button-negative-hover-border-style: $default-border-style !default;
+$button-negative-hover-border-style: none !default;
 $button-negative-hover-border-width: $button-negative-border-width !default;
 $button-negative-hover-label-colour: $button-negative-label-colour !default;
 
 // Neutral button
 $button-neutral-bgnd-colour: $colour-transparent !default;
 $button-neutral-border-colour: colour(grey, 'light') !default;
-$button-neutral-border-style: $default-border-style !default;
+$button-neutral-border-style: $button-border-style !default;
 $button-neutral-border-width: 1px !default;
 $button-neutral-label-colour: colour(grey, dark) !default;
 $button-neutral-padding:1em !default;
 
 $button-neutral-hover-bgnd-colour: colour(grey, 'x-light') !default;
 $button-neutral-hover-border-colour: $button-neutral-border-colour !default;
-$button-neutral-hover-border-style: $default-border-style !default;
+$button-neutral-hover-border-style: $button-border-style !default;
 $button-neutral-hover-border-width: 0 !default;
 $button-neutral-hover-label-colour: $button-neutral-label-colour !default;
+
+// Naked button
+$button-naked-bgnd-colour: $colour-transparent !default;
+$button-naked-border-colour: $colour-transparent !default;
+$button-naked-border-style: none !default;
+$button-naked-border-width: 0 !default;
+$button-naked-label-colour: colour(blue) !default;
+$button-naked-padding: 1em !default;
+
+$button-naked-hover-bgnd-colour: $colour-transparent !default;
+$button-naked-hover-border-colour: $colour-transparent !default;
+$button-naked-hover-border-style: none !default;
+$button-naked-hover-border-width: 0 !default;
+$button-naked-hover-label-colour:  colour(blue, 'dark') !default;
 
 
 ///*------------------------------------
@@ -104,7 +119,7 @@ $button-neutral-hover-label-colour: $button-neutral-label-colour !default;
 // * Mix into Sass to make elements buttons
 // */
 // Positive
-@mixin o-btn-positive ($padding: $button-positive-padding) {
+@mixin o-btn--positive ($padding: $button-positive-padding) {
   @include btn($padding,
                $button-positive-border-style,
                $button-positive-border-width,
@@ -122,7 +137,7 @@ $button-neutral-hover-label-colour: $button-neutral-label-colour !default;
 }
 
 // Negative
-@mixin o-btn-negative ($padding: $button-negative-padding) {
+@mixin o-btn--negative ($padding: $button-negative-padding) {
   @include btn($padding,
                $button-negative-border-style,
                $button-negative-border-width,
@@ -140,7 +155,7 @@ $button-neutral-hover-label-colour: $button-neutral-label-colour !default;
 }
 
 // Neutral
-@mixin o-btn-neutral ($padding: $button-neutral-padding) {
+@mixin o-btn--neutral ($padding: $button-neutral-padding) {
   @include btn($padding,
                $button-neutral-border-style,
                $button-neutral-border-width,
@@ -157,28 +172,25 @@ $button-neutral-hover-label-colour: $button-neutral-label-colour !default;
   }
 }
 
+@mixin o-btn--naked ($padding: $button-naked-padding) {
+  @include btn($padding,
+               $button-naked-border-style,
+               $button-naked-border-width,
+               $button-naked-hover-border-style,
+               $button-naked-hover-border-width);
+  background-color: $button-naked-bgnd-colour;
+  @if $button-naked-border-width > 0 { border-color: $button-naked-border-colour; }
+  color: $button-naked-label-colour;
+
+  &:hover{
+    background-color: %button-naked-hover-bgnd-colour;
+    @if $button-naked-hover-border-colour != $button-naked-border-colour { color: $button-naked-hover-border-colour; }
+    @if $button-naked-hover-label-colour != $button-naked-label-colour { color: $button-naked-hover-label-colour; }
+  }
+}
 
 // 100% width
-@mixin o-btn-full () {
+@mixin o-btn--full () {
   width:100%;
   text-align: center;
-}
-
-///*------------------------------------
-//  #DECORATORS
-//  ------------------------------------*/
-///**
-// * Class names that can be added to HTML elements to make them buttons
-// */
- .o-btn-full {
-   @include o-btn-full;
- }
-.o-btn-positive {
-  @include o-btn-positive;
-}
-.o-btn-negative {
-  @include o-btn-negative;
-}
-.o-btn-neutral {
-  @include o-btn-neutral;
 }

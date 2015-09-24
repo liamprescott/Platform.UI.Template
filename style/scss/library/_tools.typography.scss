@@ -6,126 +6,82 @@
 ///*------------------------------------
 //  # IMPORTS
 //  ------------------------------------*/
-@import 'tools.sizing';
+@import 'tools.media-queries';
 
 
 ///*------------------------------------
-//  # LOCAL SETTINGS
+//  # RESPONSIVE TYPOGRAPHICAL SCALE
 //  ------------------------------------*/
-$base-font-size: em-calc(16px) !default;
-$base-line-height: em-calc(12px) !default;
+
+//body copy
+$text-default-font-sizes: (
+  null: (1em, 1.25),
+  "xsmall": (1em, 1.25),
+  "medium" : (1em, 1.375)
+) !default;
+
+//h1
+$display-xlarge-font-sizes: (
+  null: (2em, 1.25),
+  "xsmall": (2em, 1.25),
+  "medium" : (2.5em, 1.125),
+  "large"  : (3em, 1.05)
+) !default;
+
+//h2
+$display-large-font-sizes: (
+  null: (1.625em, 1.15384615),
+  "xsmall": (1.625em, 1.15384615),
+  "medium" : (2em, 1.125),
+  "large"  : (2.25em, 1.25)
+) !default;
+
+//h3
+$display-medium-font-sizes: (
+  null: (1.375em, 1.13636364),
+  "xsmall": (1.375em, 1.13636364),
+  "medium" : (1.5em, 1.125)
+) !default;
+
+//h4
+$display-small-font-sizes: (
+  null: (1.125em, 1.11111111),
+  "xsmall": (1.125em, 1.11111111),
+  "medium" : (1.125em, 1.22222222)
+) !default;
+
+//h5
+$display-xsmall-font-sizes: (
+  null: (1.125em, 1.11111111),
+  "xsmall": (1.125em, 1.11111111),
+  "medium" : (1.125em, 1.22222222)
+) !default;
+
+//h6
+$display-tiny-font-sizes: (
+  null: (1.125em, 1.11111111),
+  "xsmall": (1.125em, 1.11111111),
+  "medium" : (1.125em, 1.22222222)
+) !default;
+
 
 
 ///*------------------------------------
-//  # TYPOGRAPHICAL SCALE
-//  ------------------------------------*/
-//$heading-size-1:  em-calc(48px) !default;
-//$heading-size-2:  em-calc(36px) !default;
-//$heading-size-3:  em-calc(28px) !default;
-//$heading-size-4:  em-calc(18px) !default;
-//$heading-size-5:  em-calc(16px) !default;
-//$heading-size-6:  em-calc(14px) !default;
+// #
+// ------------------------------------*/
 
-$heading-sizes: (
-  "h1": em-calc(48px),
-  "h2": em-calc(36px),
-  "h3": em-calc(28px),
-  "h4": em-calc(18px),
-  "h5": em-calc(16px),
-  "h6": em-calc(14px)
-)!default;
-// Vertical rhythm
-
-
-
-///*
-// * Baseline calibrated (Vertical rhythm) font size / line height mixin
-// * If a line height is not supplied then it will be auto calculated to the next nearest
-// * vertical rhythm (quantized) level
-// * !! Line heights are always relative !!
-// */
-@mixin font-size-baseline($font-size:$base-font-size, $line-height: auto) {
-  font-size: ($font-size / $base-font-size) * 1em;
-
-  @if $line-height == auto {
-    @if (strip-unit($font-size % $base-line-height) != 0) {
-      line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
-    } @else {
-      line-height: ceil(($font-size + em-calc(1)) / $base-line-height) * ($base-line-height / $font-size); // This ensures that line height is always > font-size
+@mixin responsive-font-size($font-sizes) {
+  @each $breakpoint, $font-definition in $font-sizes {
+    @if $breakpoint == null {
+      font-size: nth($font-definition, 1);
+      line-height: nth($font-definition, 2);
+    }
+    //@elseif $breakpoint == "print" {}
+    @else {
+      @include media-query-from($breakpoint) {
+        font-size: nth($font-definition, 1);
+        line-height: nth($font-definition, 2);
+      }
     }
   }
-  @else {
-    @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
-      line-height: $line-height;
-    }
-    @elseif ($inuit-line-height != none and $inuit-line-height != false) {
-      @warn "Oops! ‘#{$line-height}’ is not a valid value for `line-height`.";
-    }
-  }
-}
-
-
-///*
-//.as-h1,
-//.as-h2,
-//.as-h3,
-//.as-h4,
-//.as-h5,
-//.as-h6
-//
-//16/12:
-//------
-//     |    Desktop   |
-//h1:  |    48/60     |
-//h2:  |    36/48     |
-//h3:  |    28/36     |
-//h4:  |    18/24     |
-//h5:  |    16/24     |
-//h6:  |    14/24     |
-//*/
-
-///*------------------------------------
-//  #MIXINS
-//  ------------------------------------*/
-///*
-// * Mix into Sass to make elements follow a type style
-// */
-@mixin as-h1 () {
-  @include font-size-baseline(map-get($heading-sizes, "h1"));
-}
-@mixin as-h2 () {
-  @include font-size-baseline(map-get($heading-sizes, "h2"));
-}
-@mixin as-h3 () {
-  @include font-size-baseline(map-get($heading-sizes, "h3"));
-}
-@mixin as-h4 () {
-  @include font-size-baseline(map-get($heading-sizes, "h4"));
-}
-@mixin as-h5 () {
-  @include font-size-baseline(map-get($heading-sizes, "h5"));
-}
-@mixin as-h6 () {
-  @include font-size-baseline(map-get($heading-sizes, "h6"));
-}
-@mixin as-p () {
-  @include font-size-baseline();
-}
-
-///*------------------------------------
-//  #DECORATORS
-//  ------------------------------------*/
-/**
- * Class names that can be added to HTML elements to make them follow a type style
- */
-// Headings (h1 - h6)
-@for $i from 1 through 6 {
-  .as-h#{$i}{
-    @include font-size-baseline(map-get($heading-sizes, "h#{$i}"));
-  }
-}
-
-// Default text (p)
-.as-p {
-  @include as-p();
 }

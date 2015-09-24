@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Form elements</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/style/css/main.css">
+    <link rel="stylesheet" href="/style/css/testbed.css">
+  </head>
+  <body>
+
+      <!-- ======================================
+       # General form structure
+       ====================================== -->
+      <!--
+       * This is appropriate for:
+       * - Standard data capture
+       * - Search criteria
+       *
+       * Notes:
+       * - Fieldset only required when grouping related controls. If all controls related then not need to use fieldset(?)
+       -->
+      <form class="form" autocomplete="on">
+        <fieldset class="form__fieldset form__fieldset--[FIELDSET TITLE]">
+          <legend class="form__legend">Fieldset title</legend>
+
+          <!--
+           # Form items
+           -->
+          <!-- Input type: Text -->
+          <label class="form-item-text form-item--[FORM ITEM NAME]">
+            <input type="text" class="form-item__control">
+            <span class="form-item__label"></span>
+          </label>
+
+
+          <!-- Select list -->
+          <label class="form-item-select form-item--[FORM ITEM NAME]">
+            <span>Label</span>
+            <div>
+              <select>
+                <option selected></option>
+                <option></option>
+                <option></option>
+                <option></option>
+              </select>
+            <div>
+          </label>
+
+
+          <!-- Checkbox -->
+          <label class="form-item-checkbox form-item--[FORM ITEM NAME]">
+            <input type="checkbox">
+            <span>Label</span>
+          </label>
+
+
+          <!-- Checkbox list -->
+          <fieldset class="form-item-checkboxlist form-item--[FORM ITEM NAME]">
+            <legend>Checkbox list</legend>
+            <div>
+              <label class="form-item-checkboxlist__checkbox">
+                <input type="checkbox">
+                <span>Label</span>
+              </label>
+              <label class="form-item-checkboxlist__checkbox">
+                <input type="checkbox">
+                <span>Label</span>
+              </label>
+            </div>
+          </fieldset>
+
+
+          <!-- Radiobutton list -->
+          <fieldset class="form-item-radiobuttonlist form-item--[FORM ITEM NAME]">
+            <legend>Radio button list</legend>
+            <div>
+              <label>
+                <input type="radio" name="rb2">
+                <span>Label</span>
+              </label>
+              <label>
+                <input type="radio" name="rb2">
+                <span>Label</span>
+              </label>
+            </div>
+          <fieldset>
+
+
+          <!-- Textarea -->
+          <label class="form-item-textarea form-item--[FORM ITEM NAME]">
+            <textarea></textarea>
+            <span>Label</span>
+          </label>
+
+
+
+
+
+
+
+
+        </fieldset>
+
+        <!--
+         # Form actions
+         -->
+        <div class"form__actions">
+          <button class"form__submit" type="submit" autocomplete="off"></button>
+          <button class"form__reset" type="reset" autocomplete="off"></button>
+        </div>
+      </form>
+
+
+  </body>
+
+</html>
