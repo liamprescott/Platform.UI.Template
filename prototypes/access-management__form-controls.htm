@@ -37,7 +37,7 @@
           -->
           <!-- Classed html -->
           <label class="o-form-element-text"> <!-- form-element--[ELEMENT NAME] -->
-            <input class="o-form-element-text__control" type="text">
+            <input class="o-form-element-text__control" type="text" title="Label">
             <span class="o-form-element-text__label">Label</span>
           </label>
 
@@ -51,7 +51,7 @@
           -->
           <!-- Classed html -->
           <label class="o-form-element-tel"> <!-- form-element--[ELEMENT NAME] -->
-            <input class="o-form-element-tel__control" type="tel">
+            <input class="o-form-element-tel__control" type="tel" title="Label">
             <span class="o-form-element-tel__label">Label</span>
           </label>
 
@@ -65,7 +65,7 @@
           -->
           <!-- Classed html -->
           <label class="o-form-element-email"> <!-- form-element--[ELEMENT NAME] -->
-            <input class="o-form-element-email__control" type="email">
+            <input class="o-form-element-email__control" type="email" title="Label">
             <span class="o-form-element-email__label">Label</span>
           </label>
 
@@ -79,7 +79,7 @@
           -->
           <!-- Classed html -->
           <label class="o-form-element-password"> <!-- form-element--[ELEMENT NAME] -->
-            <input class="o-form-element-password__control" type="password">
+            <input class="o-form-element-password__control" type="password" title="Label">
             <span class="o-form-element-password__label">Label</span>
           </label>
 
@@ -93,7 +93,7 @@
           -->
           <!-- Classed html -->
           <label class="o-form-element-search"> <!-- form-element--[ELEMENT NAME] -->
-            <input class="o-form-element-search__control" type="search">
+            <input class="o-form-element-search__control" type="search" title="Label">
             <span class="o-form-element-search__label">Label</span>
           </label>
 
@@ -107,7 +107,7 @@
           -->
           <!-- Classed html -->
           <label class="o-form-element-url"> <!-- form-element--[ELEMENT NAME] -->
-            <input class="o-form-element-url__control" type="url">
+            <input class="o-form-element-url__control" type="url" title="Label">
             <span class="o-form-element-url__label">Label</span>
           </label>
 
@@ -130,7 +130,7 @@
           <label class="o-form-element-select"> <!-- form-element--[ELEMENT NAME] -->
             <span class="o-form-element-text__label">Label</span>
             <div class="o-form-element-select__select">
-              <select class="o-form-element-select__control">
+              <select class="o-form-element-select__control" title="Label">
                 <option selected></option>
                 <option></option>
                 <option></option>
@@ -150,7 +150,7 @@
           -->
           <!-- Classed html -->
           <label class="o-form-element-checkbox"> <!-- form-element--[ELEMENT NAME] -->
-            <input class="o-form-element-checkbox__control" type="checkbox">
+            <input class="o-form-element-checkbox__control" type="checkbox" title="Label">
             <span class="o-form-element-checkbox__label">Label</span>
             <span class="o-form-element-checkbox__faux"><!-- faux --></span>
           </label>
@@ -175,15 +175,15 @@
           <!-- Classed html -->
           <fieldset class="o-form-element-checkboxlist"> <!-- form-element--[ELEMENT NAME] -->
             <legend class="o-form-element-checkboxlist__legend">Checkbox list</legend>
-            <label class="o-form-element-checkboxlist-checkbox"> <!-- form-element--[ELEMENT NAME] -->
-              <input class="o-form-element-checkboxlist-checkbox__control" type="checkbox">
-              <span class="o-form-element-checkboxlist-checkbox__label">Label</span>
-              <span class="o-form-element-checkboxlist-checkbox__faux"><!-- faux --></span>
+            <label class="o-form-element-checkboxlist__checkbox"> <!-- form-element--[ELEMENT NAME] -->
+              <input class="o-form-element-checkboxlist__checkbox__control" type="checkbox" title="Label">
+              <span class="o-form-element-checkboxlist__checkbox__label">Label</span>
+              <span class="o-form-element-checkboxlist__checkbox__faux"><!-- faux --></span>
             </label>
-            <label class="o-form-element-checkboxlist-checkbox"> <!-- form-element--[ELEMENT NAME] -->
-              <input class="o-form-element-checkboxlist-checkbox__control" type="checkbox">
-              <span class="o-form-element-checkboxlist-checkbox__label">Label</span>
-              <span class="o-form-element-checkboxlist-checkbox__faux"><!-- faux --></span>
+            <label class="o-form-element-checkboxlist__checkbox"> <!-- form-element--[ELEMENT NAME] -->
+              <input class="o-form-element-checkboxlist__checkbox__control" type="checkbox" title="Label">
+              <span class="o-form-element-checkboxlist__checkbox__label">Label</span>
+              <span class="o-form-element-checkboxlist__checkbox__faux"><!-- faux --></span>
             </label>
           </fieldset>
 
@@ -205,26 +205,42 @@
           <fieldset>
           -->
           <!-- Classed html -->
-          <fieldset class="o-form-element-radiobuttonlist"> <!-- form-element--[ELEMENT NAME] -->
-            <legend class="o-form-element-radiobuttonlist__legend">Radio button list</legend>
+          <fieldset class="o-form-element-radiolist"> <!-- form-element--[ELEMENT NAME] -->
+            <legend class="o-form-element-radiolist__legend">Radio button list</legend>
             <label  class="o-form-element-radio">  <!-- form-element--[ELEMENT NAME] -->
-              <input class="o-form-element-radio__control" type="radio" name="[LIST IDENTIFIER]">
+              <input class="o-form-element-radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
               <span class="o-form-element-radio__label">Label</span>
               <span class="o-form-element-radio__faux"><!-- faux --></span>
             </label>
             <label  class="o-form-element-radio">  <!-- form-element--[ELEMENT NAME] -->
-              <input class="o-form-element-radio__control" type="radio" name="[LIST IDENTIFIER]">
+              <input class="o-form-element-radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
               <span class="o-form-element-radio__label">Label</span>
               <span class="o-form-element-radio__faux"><!-- faux --></span>
             </label>
           <fieldset>
 
 
+          <!-- Toggle -->
+          <!-- Naked HTML
+          <label>
+            <input type="">
+            <span>Label</span>
+            <span></span>
+          </label>
+          -->
+          <!-- Classed HTML -->
+          <label class="o-form-element-toggle">
+            <input class="o-form-element-toggle__control" type="checkbox" title="Label">
+            <span class="o-form-element-toggle__label">Label</span>
+            <span class="o-form-element-toggle__faux"></span>
+          </label>
+
+
           <!-- Textarea -->
           <!-- Naked html
-          <label class="form-element-textarea">
-            <textarea class="form-element-textarea__control"></textarea>
-            <span class="form-element-textarea__label">Label</span>
+          <label>
+            <textarea></textarea>
+            <span>Label</span>
           </label>
           -->
           <!-- Classed html -->
