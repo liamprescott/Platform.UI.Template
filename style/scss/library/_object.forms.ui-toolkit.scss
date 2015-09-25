@@ -8,6 +8,7 @@
 // Generic
 // Base
 // Objects
+@import'object.media';
 // Components / modules
 // Utilities (Trumps)
 
@@ -22,6 +23,7 @@
 //    #Input type: Password
 //    #Input type: Search
 //    #Input type: URL
+//    #Form element with a figure
 //    #Select list
 //    #Checkbox
 //    #Checkboxlist
@@ -30,6 +32,23 @@
 //    #Toggle
 //    #Textarea
 //  */
+
+
+//----------------------------------------
+//
+// TODO
+// Input / selectlist sizes
+// - default
+// - large
+// - xlarge
+//
+// Themes / colour schemes
+// - neutral
+// - dark
+// - light
+//
+//----------------------------------------
+
 
 ///*------------------------------------
 //  #BASE FORM CONSTRUCT
@@ -130,6 +149,29 @@
 
 
 ///*------------------------------------
+//  #Form element with a figure
+//  ------------------------------------*/
+
+@mixin o-form-element-figure {
+  &__figure {
+    display:block;
+    width:50px;
+    background-color: #333;
+  }
+}
+
+.o-form-element-with-figure {
+  @include o-media-match-height;
+  @include o-form-element-figure;
+}
+.o-form-element-with-figure--reversed {
+  @include o-media-match-height--rtl;
+  @include o-form-element-figure;
+}
+
+
+
+///*------------------------------------
 //  #Select list
 //  ------------------------------------*/
 .o-form-element-select {
@@ -169,18 +211,18 @@
 //  ------------------------------------*/
 .o-form-element-checkboxlist {
   // Legend
-  &__legend {}
+  &__legend { }
 
   // Checkbox
   &__checkbox {
     // Control
-    &__control {}
+    &__control { }
 
     // Label
-    &__label {}
+    &__label { }
 
     // Faux
-    &__faux {}
+    &__faux { }
   }
 }
 

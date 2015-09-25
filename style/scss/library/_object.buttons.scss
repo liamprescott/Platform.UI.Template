@@ -1,5 +1,5 @@
 ///*------------------------------------
-//  #OBJECT : UI TOOLKIT : BUTTONS
+//  #OBJECT : BUTTONS
 //  ------------------------------------*/
 
 // Settings
@@ -13,7 +13,7 @@
 // Base
 // Objects
 // Components / modules
-// Utilities (Trumps)
+// Utilities
 
 
 ///*
@@ -183,7 +183,7 @@ $button-naked-hover-label-colour:  colour(blue, 'dark') !default;
   color: $button-naked-label-colour;
 
   &:hover{
-    background-color: %button-naked-hover-bgnd-colour;
+    background-color: $button-naked-hover-bgnd-colour;
     @if $button-naked-hover-border-colour != $button-naked-border-colour { color: $button-naked-hover-border-colour; }
     @if $button-naked-hover-label-colour != $button-naked-label-colour { color: $button-naked-hover-label-colour; }
   }

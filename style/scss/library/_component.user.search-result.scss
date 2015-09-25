@@ -4,28 +4,30 @@
  */
 
 .c-user-search-result {
+  // Trigger
+  &__trigger {}
 
-  // Image
-  &__image {}
+    // Image
+    &__image {}
 
-  // Name
-  &__name {}
+    // Name
+    &__name {}
 
-  // Details
-  &__details {}
+    // Details
+    &__details {}
 
-    // User name
-    &__username {}
+      // User name
+      &__username {}
 
-    // Email address
-    &__email {}
+      // Email address
+      &__email {}
 
-    // Locations
-    &__locations {}
+      // Locations
+      &__locations {}
 
-      // Location list
-      &__location-list {}
+        // Location list
+        &__location-list {}
 
-        // Location
-        &__location {}
+          // Location
+          &__location {}
 }

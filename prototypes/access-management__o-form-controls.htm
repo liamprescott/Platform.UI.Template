@@ -10,6 +10,7 @@
   </head>
   <body>
 
+
       <!-- ======================================
        # General form structure
        ====================================== -->
@@ -22,13 +23,24 @@
        * - Fieldset only required when grouping related controls. (?)If all controls related then not need to use fieldset(?)
        -->
 
+
+
+      <!--
+      ==============================================================================
+      TODO: VALIDATION
+      --has-error
+      __help
+      __assist
+      ==============================================================================
+      -->
+
       <form class="o-form" autocomplete="on">
         <!-- #Form > fieldset -->
         <fieldset class="o-form__fieldset"> <!-- form__fieldset--[FIELDSET TITLE] -->
           <legend class="o-form__legend">Fieldset title</legend>
           <!-- #Form items -->
 
-          <!-- Input type: Text -->
+          <!-- #Input type: Text -->
           <!-- Naked html
           <label>
             <input type="text">
@@ -42,7 +54,7 @@
           </label>
 
 
-          <!-- Input type: Tel -->
+          <!-- #Input type: Tel -->
           <!-- Naked html
           <label>
             <input type="tel">
@@ -56,7 +68,7 @@
           </label>
 
 
-          <!-- Input type: Email -->
+          <!-- #Input type: Email -->
           <!-- Naked html
           <label>
             <input type="email">
@@ -70,7 +82,7 @@
           </label>
 
 
-          <!-- Input type: Password -->
+          <!-- #Input type: Password -->
           <!-- Naked html
           <label>
             <input type="password">
@@ -84,7 +96,7 @@
           </label>
 
 
-          <!-- Input type: search -->
+          <!-- #Input type: search -->
           <!-- Naked html
           <label>
             <input type="search">
@@ -98,7 +110,7 @@
           </label>
 
 
-          <!-- Input type: URL -->
+          <!-- #Input type: URL -->
           <!-- Naked html
           <label>
             <input type="url">
@@ -112,7 +124,42 @@
           </label>
 
 
-          <!-- Select list -->
+          <!-- #Form element with an icon -->
+          <!-- e.g. Super search -->
+          <!-- e.g. -->
+          <!-- Naked HTML
+          <div>
+            <span></span>
+            <label>
+              <input type="text">
+              <span>Label</span>
+            </label>
+          </div>
+          -->
+          <!-- Classed HTML -->
+          <!-- 1. Default -->
+          <div class="o-form-element-with-figure">
+            <span class="o-form-element-with-figure__figure"></span>
+            <label class="o-form-element-with-figure__body [ o-form-element-text ]"> <!-- This will be another 'form-element-[TYPE]' e.g.'form-element-text' -->
+              <!-- Example contents -->
+              <input class="o-form-element-text__control" type="text" title="Label">
+              <span class="o-form-element-text__label">Label</span>
+              <!--/ Example contents -->
+            </label>
+          </div>
+          <!-- 1. Reversed -->
+          <div class="o-form-element-with-figure--reversed">
+            <span class="o-form-element-with-figure__figure"></span>
+            <label class="o-form-element-with-figure__body [ o-form-element-text ]">
+              <!-- Example contents -->
+              <input class="o-form-element-text__control" type="text" title="Label">
+              <span class="o-form-element-text__label">Label</span>
+              <!--/ Example contents -->
+            </label>
+          </div>
+
+
+          <!-- #Select list -->
           <!-- Naked html
           <label>
             <span>Label</span>
@@ -131,16 +178,16 @@
             <span class="o-form-element-text__label">Label</span>
             <div class="o-form-element-select__select">
               <select class="o-form-element-select__control" title="Label">
-                <option selected></option>
-                <option></option>
-                <option></option>
-                <option></option>
+                <option selected>Option</option>
+                <option>Option</option>
+                <option>Option</option>
+                <option>An option with more and more text to see what happens</option>
               </select>
             <div>
           </label>
 
 
-          <!-- Checkbox -->
+          <!-- #Checkbox -->
           <!-- Naked html
           <label>
             <input type="checkbox">
@@ -156,7 +203,7 @@
           </label>
 
 
-          <!-- Checkbox list -->
+          <!-- #Checkbox list -->
           <!-- Naked html
           <fieldset>
             <legend>Checkbox list</legend>
@@ -188,7 +235,7 @@
           </fieldset>
 
 
-          <!-- Radiobutton list -->
+          <!-- #Radiobutton list -->
           <!-- Naked html
           <fieldset>
             <legend>Radio button list</legend>
@@ -217,10 +264,10 @@
               <span class="o-form-element-radio__label">Label</span>
               <span class="o-form-element-radio__faux"><!-- faux --></span>
             </label>
-          <fieldset>
+          </fieldset>
 
 
-          <!-- Toggle -->
+          <!-- #Toggle -->
           <!-- Naked HTML
           <label>
             <input type="">
@@ -236,7 +283,7 @@
           </label>
 
 
-          <!-- Textarea -->
+          <!-- #Textarea -->
           <!-- Naked html
           <label>
             <textarea></textarea>
@@ -259,8 +306,8 @@
          # Form actions
          -->
         <div class"o-form__actions">
-          <button class"o-form__submit" type="submit" autocomplete="off"></button>
-          <button class"o-form__reset" type="reset" autocomplete="off"></button>
+          <button class"o-form__submit" type="submit" autocomplete="off">Submit</button>
+          <button class"o-form__reset" type="reset" autocomplete="off">Reset</button>
         </div>
       </form>
 

@@ -1,0 +1,105 @@
+
+///*------------------------------------
+//  #OBJECT : MEDIA
+//  ------------------------------------*/
+
+// Generic
+// Base
+// Objects
+// Components / modules
+// Utilities
+
+///*
+//  INDEX:
+//  ------
+//  #o-media
+//  #o-media--rtl
+//  #o-media-center
+//  #o-media-center--rtl
+//  #o-media-match-height
+//  #o-media-match-height--rtl
+//  #o-media-direction-rtl
+//  */
+
+///*------------------------------------
+// #o-media
+// ------------------------------------*/
+@mixin o-media {
+  align-items: flex-start;
+  display:flex;
+  flex-flow: row;
+  //flex-wrap:nowrap; // nowrap (default) | wrap | wrap-reverse
+  //justify-content: space-between;
+
+  // Image
+  &__figure {
+    //flex:; // Shorthand for: flex-grow | flex-shrink | flex-basis (0 0 auto)
+    //flex-grow:;
+    //flex-shrink:;
+    //flex-basis:;
+    flex-shrink: 0;
+    //align-self:auto;
+    order:1;
+  }
+
+  // Details
+  &__body {
+    flex: 1; /* Details resize */
+    order:2;
+  }
+
+}
+
+///*------------------------------------
+// #o-media--rtl
+// ------------------------------------*/
+@mixin o-media--rtl {
+  @include o-media;
+  @include o-media--direction-rtl;
+}
+
+///*------------------------------------
+// #o-media-center
+// ------------------------------------*/
+@mixin o-media-center {
+  @include o-media;
+  align-items: center;
+}
+
+///*------------------------------------
+// #o-media-center--rtl
+// ------------------------------------*/
+@mixin o-media-center--rtl {
+  @include o-media;
+  @include o-media--direction-rtl;
+}
+
+///*------------------------------------
+// #o-media-match-height
+// ------------------------------------*/
+@mixin o-media-match-height {
+  @include o-media;
+  align-items: stretch;
+}
+
+///*------------------------------------
+// #o-media-match-height--rtl
+// ------------------------------------*/
+@mixin o-media-match-height--rtl {
+  @include o-media-match-height;
+  @include o-media--direction-rtl;
+}
+
+///*------------------------------------
+// #o-media-direction-rtl
+// ------------------------------------*/
+@mixin o-media--direction-rtl {
+    // Image
+    &__figure {
+      order:2;
+    }
+    // Details
+    &__body {
+      order: 1;
+    }
+}
