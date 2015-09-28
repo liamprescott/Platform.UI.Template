@@ -5,26 +5,25 @@
 @import 'object.buttons';
 
 
-
 $output-button-ui-classes: false !default;
 
 ///**
 // * Decorator Class names that can be added to HTML elements to make them buttons
 // */
-@if ($output-button-ui-classes) {
-  .o-button-full {
+@if ($output-button-ui-classes == true) {
+  .o-button--full {
     @include o-button--full;
   }
- .o-button-positive {
+ .o-button--positive {
    @include o-button--positive;
  }
- .o-btn-negative {
+ .o-btn--negative {
    @include o-button--negative;
  }
- .o-btn-neutral {
+ .o-btn--neutral {
    @include o-button--neutral;
  }
- .o-btn-naked {
+ .o-btn--naked {
    @include o-button--naked;
  }
 }
