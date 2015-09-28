@@ -64,60 +64,60 @@ body{
 
 //////////////////////////////////////////////////////////////////////////////
 
-.test-autoprefixer {
-
-  // Animation
-  animation-delay: 0;
-  animation-direction: alternate; // normal | reverse | alternate | alternate-reverse
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-name: testautoprefixer;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both; // none | forwards | backwards | both
-
-  // Box shadow
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);  // [inset] | offset-x | offset-y | blur-radius | spread-radius | color
-
-  // Border radius
-  border-radius:1em;
-
-  // Flexbox
-  display: flex;
-
-  // Text shadow
-  text-shadow: rgba(0,0,0,0.5) 1px 1px 10px; // color | offset-x | offset-y | blur-radius] OR [offset-x | offset-y | blur-radius | color
-
-  // Transition
-  transition: top 1s ease-in-out 0.5s;  // property name | duration | timing function | delay
-  transition-property: left;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-  transition-delay: 0;
-
-  // Transform
-  transform: translateX(10em);
-  //transform-origin: 20px 10% 2em; // x-offset y-offset z-offset
-}
-
-@keyframes testautoprefixer {
-  from {
-    width: 100%;
-  }
-  50% {
-    width: 50%;
-  }
-  to {
-    width: 200%;
-  }
-}
-
-
-/* HELLO */
-.is-this-in-the-right-place {
-  // Nope - not when autoprefixing:
-  // https://github.com/postcss/autoprefixer/issues/453
-  background-color: lime;
-}
+//.test-autoprefixer {
+//
+//  // Animation
+//  animation-delay: 0;
+//  animation-direction: alternate; // normal | reverse | alternate | alternate-reverse
+//  animation-duration: 1s;
+//  animation-iteration-count: infinite;
+//  animation-name: testautoprefixer;
+//  animation-timing-function: ease-in-out;
+//  animation-fill-mode: both; // none | forwards | backwards | both
+//
+//  // Box shadow
+//  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);  // [inset] | offset-x | offset-y | blur-radius | spread-radius | color
+//
+//  // Border radius
+//  border-radius:1em;
+//
+//  // Flexbox
+//  display: flex;
+//
+//  // Text shadow
+//  text-shadow: rgba(0,0,0,0.5) 1px 1px 10px; // color | offset-x | offset-y | blur-radius] OR [offset-x | offset-y | blur-radius | color
+//
+//  // Transition
+//  transition: top 1s ease-in-out 0.5s;  // property name | duration | timing function | delay
+//  transition-property: left;
+//  transition-duration: 1s;
+//  transition-timing-function: ease;
+//  transition-delay: 0;
+//
+//  // Transform
+//  transform: translateX(10em);
+//  //transform-origin: 20px 10% 2em; // x-offset y-offset z-offset
+//}
+//
+//@keyframes testautoprefixer {
+//  from {
+//    width: 100%;
+//  }
+//  50% {
+//    width: 50%;
+//  }
+//  to {
+//    width: 200%;
+//  }
+//}
+//
+//
+///* HELLO */
+//.is-this-in-the-right-place {
+//  // Nope - not when autoprefixing:
+//  // https://github.com/postcss/autoprefixer/issues/453
+//  background-color: lime;
+//}
 
 
 

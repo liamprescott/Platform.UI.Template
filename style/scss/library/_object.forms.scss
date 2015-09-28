@@ -8,9 +8,9 @@
 // Generic
 // Base
 // Objects
-@import'object.forms';
+@import'object.media';
 // Components / modules
-// Utilities
+// Utilities (Trumps)
 
 ///*
 //  INDEX:
@@ -33,101 +33,245 @@
 //    #Textarea
 //  */
 
+
+//----------------------------------------
+//
+// TODO
+// Input / selectlist sizes
+// - default
+// - large
+// - xlarge
+//
+// Themes / colour schemes
+// - neutral
+// - dark
+// - light
+//
+//----------------------------------------
+
+
 ///*------------------------------------
 //  #BASE FORM CONSTRUCT
 //  ------------------------------------*/
-.o-form {
-  @include o-form;
+@mixin o-form {
+  // Fieldset
+  &__fieldset {}
+
+  // Legend
+  &__legend {}
+
+  // Actions
+  &__actions {}
+
+    // Submit
+    &__submit {}
+
+    // Reset
+    &__reset {}
 }
+
+
 
 ///*------------------------------------
 //  #INDIVIDUAL FORM ELEMENTS
 //  ------------------------------------*/
+
 ///*------------------------------------
 //  #Input type: Text
 //  ------------------------------------*/
-.o-form-element-text {
-  @include o-form-element-text;
+@mixin o-form-element-text {
+  // Control
+  &__control {}
+
+  // Label
+  &__label {}
 }
+
+
 ///*------------------------------------
 //  #Input type: Tel
 //  ------------------------------------*/
-.o-form-element-tel {
-  @include o-form-element-tel;
+@mixin o-form-element-tel {
+  // Control
+  &__control {}
+
+  // Label
+  &__label {}
 }
+
+
 ///*------------------------------------
 //  #Input type: Email
 //  ------------------------------------*/
-.o-form-element-email {
-  @include o-form-element-email;
+@mixin o-form-element-email {
+  // Control
+  &__control {}
+
+  // Label
+  &__label {}
 }
+
+
 ///*------------------------------------
 //  #Input type: Password
 //  ------------------------------------*/
-.o-form-element-password {
-  @include o-form-element-password;
+@mixin o-form-element-password {
+  // Control
+  &__control {}
+
+  // Label
+  &__label {}
 }
+
+
 ///*------------------------------------
 //  #Input type: Search
 //  ------------------------------------*/
-.o-form-element-search {
-  @include o-form-element-search;
+@mixin o-form-element-search {
+  // Control
+  &__control {}
+
+  // Label
+  &__label {}
 }
+
+
 ///*------------------------------------
 //  #Input type: URL
 //  ------------------------------------*/
-.o-form-element-url {
-  @include o-form-element-url;
+@mixin o-form-element-url {
+  // Control
+  &__control {}
+
+  // Label
+  &__label {}
 }
+
+
 ///*------------------------------------
 //  #Form element with a figure
 //  ------------------------------------*/
-.o-form-element-with-figure {
-  @include o-form-element-with-figure;
+
+@mixin o-form-element-figure {
+  &__figure {
+    display:block;
+    width:50px;
+    background-color: #333;
+  }
 }
-.o-form-element-with-figure--reversed {
-  @include o-form-element-with-figure--reversed;
+
+@mixin o-form-element-with-figure {
+  @include o-media-match-height;
+  @include o-form-element-figure;
 }
+@mixin o-form-element-with-figure--reversed {
+  @include o-media-match-height--rtl;
+  @include o-form-element-figure;
+}
+
+
+
 ///*------------------------------------
 //  #Select list
 //  ------------------------------------*/
-.o-form-element-select {
-  @include o-form-element-select;
+@mixin o-form-element-select {
+  // Label
+  &__label {}
+
+  // Select
+  &__select {}
+
+    // Control
+    &__control {
+
+      // Control option
+      .option {}
+    }
+
 }
+
+
 ///*------------------------------------
 //  #Checkbox
 //  ------------------------------------*/
-.o-form-element-checkbox {
-  @include o-form-element-checkbox;
+@mixin o-form-element-checkbox {
+  // Control
+  &__control {}
+
+  // Label
+  &__label {}
+
+  // Faux
+  &__faux {}
 }
+
+
 ///*------------------------------------
 //  #Checkboxlist
 //  ------------------------------------*/
-.o-form-element-checkboxlist {
-  @include o-form-element-checkboxlist;
+@mixin o-form-element-checkboxlist {
+  // Legend
+  &__legend { }
+
+  // Checkbox
+  &__checkbox {
+    // Control
+    &__control { }
+
+    // Label
+    &__label { }
+
+    // Faux
+    &__faux { }
+  }
 }
+
+
 ///*------------------------------------
 //  #Radiolist
 //  ------------------------------------*/
-.o-form-element-radiolist {
-  @include o-form-element-radiolist;
+@mixin o-form-element-radiolist {
+  // Legend
+  &__legend {}
 }
   ///*------------------------------------
   //  #Radio
   //  Radio controls can only exist in radio lists!!
   //  ------------------------------------*/
-  .o-form-element-radio {
-    @include o-form-element-radio;
+  @mixin o-form-element-radio {
+    // Control
+    &__control {}
+
+    // Label
+    &__label {}
+
+    // Faux
+    &__faux {}
   }
+
+
 ///*------------------------------------
 //  #Toggle
 //  ------------------------------------*/
-.o-form-element-toggle {
-  @include o-form-element-toggle;
+@mixin o-form-element-toggle {
+  // Control
+  &__control {}
+
+  // Label
+  &__label {}
+
+  // Faux
+  &__faux {}
 }
+
+
 ///*------------------------------------
 //  #Textarea
 //  ------------------------------------*/
-.o-form-element-textarea {
-  @include o-form-element-textarea;
+@mixin o-form-element-textarea {
+  // Control
+  &__control {}
+
+  // Label
+  &__label {}
 }
