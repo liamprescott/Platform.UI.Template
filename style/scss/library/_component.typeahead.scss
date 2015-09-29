@@ -1,0 +1,22 @@
+
+  /**
+   * Typeahead
+   */
+
+  .c-typeahead {
+
+    // Settings
+    &__settings {}
+
+    // Search type
+    &__search-type {}
+
+    // Submit button (Not visible on mobile!!...how)
+    &__submit {}
+
+    // Suggestions
+    &__suggestions {}
+
+      // Suggestion
+      &__suggestion {}
+  }

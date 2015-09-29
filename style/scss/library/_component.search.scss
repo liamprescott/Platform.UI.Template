@@ -4,11 +4,16 @@
    * Search
    */
   .c-search {
-    
-    // Search criteria
-    &__criteria { }
 
-    // Search result list
-    &__result-list { }
+    // Criteria
+    &__settings {}
 
+      // Figure (open search-type-modal)
+      &__settings__figure {}
+
+      // Body
+      &__settings__body {}
+
+    // Results
+    &__results {}
   }

@@ -53,7 +53,7 @@
 ///*------------------------------------
 //  #BASE FORM CONSTRUCT
 //  ------------------------------------*/
-@mixin o-form {
+.o-form {
   // Fieldset
   &__fieldset {}
 
@@ -79,7 +79,7 @@
 ///*------------------------------------
 //  #Input type: Text
 //  ------------------------------------*/
-@mixin o-form-element-text {
+.o-form-element-text {
   // Control
   &__control {}
 
@@ -91,7 +91,7 @@
 ///*------------------------------------
 //  #Input type: Tel
 //  ------------------------------------*/
-@mixin o-form-element-tel {
+.o-form-element-tel {
   // Control
   &__control {}
 
@@ -103,7 +103,7 @@
 ///*------------------------------------
 //  #Input type: Email
 //  ------------------------------------*/
-@mixin o-form-element-email {
+.o-form-element-email {
   // Control
   &__control {}
 
@@ -115,7 +115,7 @@
 ///*------------------------------------
 //  #Input type: Password
 //  ------------------------------------*/
-@mixin o-form-element-password {
+.o-form-element-password {
   // Control
   &__control {}
 
@@ -127,7 +127,7 @@
 ///*------------------------------------
 //  #Input type: Search
 //  ------------------------------------*/
-@mixin o-form-element-search {
+.o-form-element-search {
   // Control
   &__control {}
 
@@ -139,7 +139,7 @@
 ///*------------------------------------
 //  #Input type: URL
 //  ------------------------------------*/
-@mixin o-form-element-url {
+.o-form-element-url {
   // Control
   &__control {}
 
@@ -160,24 +160,26 @@
   }
 }
 
-@mixin o-form-element-with-figure {
+.o-form-element-with-figure {
   @include o-media-match-height;
   @include o-form-element-figure;
 }
-@mixin o-form-element-with-figure--reversed {
-  @include o-media-match-height--rtl("o-form-element-with-figure");
+.o-form-element-with-figure--reversed {
+  @include o-media-match-height--rtl;
+  @include o-form-element-figure;
 }
+
 
 
 ///*------------------------------------
 //  #Select list
 //  ------------------------------------*/
-@mixin o-form-element-select {
+.o-form-element-select {
   // Label
   &__label {}
 
   // Select
-  &__select {}
+  &__control {}
 
     // Control
     &__control {
@@ -192,7 +194,7 @@
 ///*------------------------------------
 //  #Checkbox
 //  ------------------------------------*/
-@mixin o-form-element-checkbox {
+.o-form-element-checkbox {
   // Control
   &__control {}
 
@@ -207,7 +209,7 @@
 ///*------------------------------------
 //  #Checkboxlist
 //  ------------------------------------*/
-@mixin o-form-element-checkboxlist {
+.o-form-element-checkboxlist {
   // Legend
   &__legend { }
 
@@ -228,7 +230,7 @@
 ///*------------------------------------
 //  #Radiolist
 //  ------------------------------------*/
-@mixin o-form-element-radiolist {
+.o-form-element-radiolist {
   // Legend
   &__legend {}
 }
@@ -236,7 +238,7 @@
   //  #Radio
   //  Radio controls can only exist in radio lists!!
   //  ------------------------------------*/
-  @mixin o-form-element-radio {
+  .o-form-element-radio {
     // Control
     &__control {}
 
@@ -251,7 +253,7 @@
 ///*------------------------------------
 //  #Toggle
 //  ------------------------------------*/
-@mixin o-form-element-toggle {
+.o-form-element-toggle {
   // Control
   &__control {}
 
@@ -266,7 +268,7 @@
 ///*------------------------------------
 //  #Textarea
 //  ------------------------------------*/
-@mixin o-form-element-textarea {
+.o-form-element-textarea {
   // Control
   &__control {}
 

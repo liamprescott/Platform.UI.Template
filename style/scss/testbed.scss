@@ -1,16 +1,18 @@
+
+
 // Settings
-@import 'library/settings.defaults';
+//@import 'library/settings.defaults';
 // Tools
-@import 'library/tools.media-queries';
+//@import 'library/tools.media-queries';
 @import 'library/tools.typography';
 // Generic
-@import 'library/generic.normalize';
-@import 'library/generic.box-sizing';
+//@import 'library/generic.normalize';
+//@import 'library/generic.box-sizing';
 // Base
 // Objects
-@import 'library/object.buttons';
-@import 'library/object.buttons.ui-toolkit';
-@import 'library/object.forms.ui-toolkit';
+//@import 'library/object.buttons';
+//@import 'library/object.buttons.ui-toolkit';
+//@import 'library/object.forms.ui-toolkit';
 // Components / modules
 // Utilities
 //@import 'library/utility.clearfix.ui-toolkit';
@@ -48,18 +50,18 @@ body{
   font-family: sans-serif;
 }
 
-.test-button--positive {
-  @include o-button--positive;
-}
-.test-button--negative {
-  @include o-button--negative;
-}
-.test-button--neutral {
-  @include o-button--neutral;
-}
-.test-button--naked {
-  @include o-button--naked;
-}
+//.test-button--positive {
+//  @include o-button--positive;
+//}
+//.test-button--negative {
+//  @include o-button--negative;
+//}
+//.test-button--neutral {
+//  @include o-button--neutral;
+//}
+//.test-button--naked {
+//  @include o-button--naked;
+//}
 
 
 //////////////////////////////////////////////////////////////////////////////
@@ -123,48 +125,43 @@ body{
 
 //////////////////////////////////////////////////////////////////////////////
 
-.test-media-queries {
-  background-color:lime;
-  @include media-query-between () {
-    background-color:yellow;
-  }
-  @include media-query-between ("small", "large") {
-    background-color:blue;
-  }
-  @include media-query-from ("medium") {
-    background-color:red;
-  }
-  @include media-query-upto ("medium") {
-    background-color:black;
-  }
-}
+//.test-media-queries {
+//  background-color:lime;
+//  @include media-query-between () {
+//    background-color:yellow;
+//  }
+//  @include media-query-between ("small", "large") {
+//    background-color:blue;
+//  }
+//  @include media-query-from ("medium") {
+//    background-color:red;
+//  }
+//  @include media-query-upto ("medium") {
+//    background-color:black;
+//  }
+//}
 
 
 //////////////////////////////////////////////////////////////////////////////
 
 .test-responsive-h1 {
   color:#333;
-  //color:lime;
   @include responsive-font-size($display-xlarge-font-sizes);
 }
 .test-responsive-h2 {
   color:#333;
-  //color:lime;
   @include responsive-font-size($display-large-font-sizes);
 }
 .test-responsive-h3 {
   color:#333;
-  //color:lime;
   @include responsive-font-size($display-medium-font-sizes);
 }
 .test-responsive-h4 {
   color:#333;
-  //color:lime;
   @include responsive-font-size($display-small-font-sizes);
 }
 .test-responsive-p {
   color:#999;
-  //color:lime;
   @include responsive-font-size($text-default-font-sizes);
 }
 

@@ -17,6 +17,122 @@
 
     <!-- Naked HTML
     <section>
+      // Settings / Terms
+      <form> // NOTE No need for a <fieldset> as only 1 form field
+        <div> // Media object (Form element with a figure)
+          <a></a>
+          <label>
+            <input type="search" title="Find a user">
+            <span>Find a user</span>
+          </label>
+        </div>
+        <button type="submit" autocomplete="off">Submit</button>
+      </form>
+
+      // Suggestions (Results)
+      <ul>
+        <li>
+          <a>
+            <img />
+            <p><mark>Firstname</mark> Surname</p>
+            <p>User location or <mark>data match</mark></p>
+          </a>
+        </li>
+      </ul>
+    </section>
+    -->
+    <!-- Classed HTML -->
+    <section class="c-typeahead">
+      <form class="c-typeahead__settings">
+        <div class="c-typeahead-capture">
+          <a class="c-typeahead-capture__figure"></a>
+          <label class="c-typeahead-capture__body [ o-form-element-text ]">
+            <input class="c-typeahead-capture__control" type="search" title="Find a user">
+            <span class="c-typeahead-capture__label">Find a user</span>
+          </label>
+        </div>
+
+        <div class="c-typeahead__search-type c-search-type-modal">
+          <span class="c-search-type-modal__knock-out"></span>
+          <div class="c-search-type-modal__display">
+            <a class="c-search-type-modal__close">Close</a>
+            <fieldset class="c-search-type-modal__options o-form-element-radiolist">
+              <legend class="o-form-element-radiolist__legend">Radio button list</legend>
+              <label  class="o-form-element-radio">
+                <input class="o-form-element-radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
+                <span class="o-form-element-radio__label">Label</span>
+                <span class="o-form-element-radio__faux"></span>
+              </label>
+              <label  class="o-form-element-radio">
+                <input class="o-form-element-radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
+                <span class="o-form-element-radio__label">Label</span>
+                <span class="o-form-element-radio__faux"></span>
+              </label>
+              <!-- etc... -->
+            </fieldset>
+            <!-- Option 2 (using 'object' decorator classes):
+            <fieldset class="c-search-type-modal__radiolist">
+              <legend class="c-search-type-modal__radiolist__legend">Radio button list</legend>
+              <label  class="c-search-type-modal__radio">
+                <input class="c-search-type-modal__radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
+                <span class="c-search-type-modal__radio__label">Label</span>
+                <span class="c-search-type-modal__radio__faux"></span>
+              </label>
+              <label  class="c-search-type-modal__radio">
+                <input class="c-search-type-modal__radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
+                <span class="c-search-type-modal__radio__label">Label</span>
+                <span class="c-search-type-modal__radio__faux"></span>
+              </label>
+            </fieldset>
+            -->
+          </div>
+        </div>
+
+        <button class"c-typeahead__submit" type="submit" autocomplete="off">Submit</button>
+        <!-- Default form element decorator classes :
+        <div class="o-form-element-with-figure--reversed">
+          <span class="o-form-element-with-figure__figure"></span>
+          <label class="o-form-element-with-figure__body [ o-form-element-text ]">
+            <input class="o-form-element-text__control" type="search" title="Label">
+            <span class="o-form-element-text__label">Label</span>
+          </label>
+        </div>
+        -->
+      </form>
+      <ul class="c-typeahead__suggestions">
+        <li class="c-typeahead__suggestion">
+          <a class="c-typeahead-result">
+            <img class="c-typeahead-result__figure--[TYPE]" />
+            <p class="c-typeahead-result__title"><mark>Firstname</mark> Surname</p>
+            <p class="c-typeahead-result__info">User location or <mark>data match</mark></p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Option 2
+    <section>
+      <section></section>
+      <ul>
+        <li>
+          <article>
+            <a>
+              <img />
+              <h1><mark>Firstname</mark> Surname</h1>
+              <p>User location or <mark>data match</mark></p>
+            </a>
+          </article>
+        </li>
+      </ul>
+    </section>
+    -->
+
+
+
+    <!-- ========================================================================================================================= -->
+
+    <!-- Naked HTML
+    <section>
       <section></section>
       <section></section>
     </section>
@@ -24,10 +140,53 @@
     <!-- Classed HTML -->
     <section class="c-search">
 
-      <section class="c-search__settings"></section>
+      <form class="c-search__settings">
+        <a class="c-search__settings__figure"></a>
 
-      <section class="c-search__result-list">
+        <!-- Customised Checkboxlist Control (Not standard as unique styling)-->
+        <fieldset class="c-search__settings__body c-search-terms">
+          <legend class="c-search-terms__legend">Checkbox list</legend>
+          <label class="c-search-term">
+            <input class="c-search-term__control" type="checkbox" title="search">
+            <span class="c-search-term__label">search</span>
+            <span class="c-search-term__faux"></span>
+          </label>
+          <label class="c-search-term">
+            <input class="c-search-term__control" type="checkbox" title="words">
+            <span class="c-search-term__label">words</span>
+            <span class="c-search-term__faux"></span>
+          </label>
+        </fieldset>
 
+
+        <!-- Standard Checkboxlist Control
+        <fieldset class="c-search__settings__body o-form-element-checkboxlist">
+          <legend class="o-form-element-checkboxlist__legend">Checkbox list</legend>
+          <label class="o-form-element-checkboxlist__checkbox">
+            <input class="o-form-element-checkboxlist__checkbox__control" type="checkbox" title="Word">
+            <span class="o-form-element-checkboxlist__checkbox__label">Word</span>
+            <span class="o-form-element-checkboxlist__checkbox__faux"></span>
+          </label>
+          <label class="o-form-element-checkboxlist__checkbox">
+            <input class="o-form-element-checkboxlist__checkbox__control" type="checkbox" title="Term">
+            <span class="o-form-element-checkboxlist__checkbox__label">Term</span>
+            <span class="o-form-element-checkboxlist__checkbox__faux"></span>
+          </label>
+        </fieldset>
+        -->
+        <!-- Standard input
+        <div class="c-search__terms">
+          <span class="c-search__terms__figure"></span>
+          <label class="c-search__terms__body">
+            <input class="c-search__terms__control" type="hidden" title="Search terms">
+            <span class="c-search__terms__label">Search terms</span>
+          </label>
+        </div>
+        -->
+      </form>
+
+
+      <section class="c-search__results">
         <!-- Search result items -->
 
         <!-- Naked HTML
@@ -49,18 +208,18 @@
         </article>
         -->
         <!-- Classed HTML -->
-        <article class="c-user-search-result">
-          <a class="c-user-search-result__trigger" href="">
-            <img class="c-user-search-result__figure" />
-            <h1 class="c-user-search-result__name"><mark>Firstname</mark> Surname</h1>
-            <ul class="c-user-search-result__details">
-              <li class="c-user-search-result__username">User_Name</li>
-              <li class="c-user-search-result__email"><mark>firstname</mark>.lastname@web-address.co.uk</li>
-              <li class="c-user-search-result__locations">
-                <ul class="c-user-search-result__location-list">
-                  <li class="c-user-search-result__location">User Location Name</li>
-                  <li class="c-user-search-result__location">User <mark>Location Name</mark></li>
-                  <li class="c-user-search-result__location">User Location Name</li>
+        <article class="c-search-result-user">
+          <a class="c-search-result-user__trigger" href="">
+            <img class="c-search-result-user__figure" />
+            <h1 class="c-search-result-user__name"><mark>Firstname</mark> Surname</h1>
+            <ul class="c-search-result-user__details">
+              <li class="c-search-result-user__username">User_Name</li>
+              <li class="c-search-result-user__email"><mark>firstname</mark>.lastname@web-address.co.uk</li>
+              <li class="c-search-result-user__locations">
+                <ul class="c-search-result-user__location-list">
+                  <li class="c-search-result-user__location">User Location Name</li>
+                  <li class="c-search-result-user__location">User <mark>Location Name</mark></li>
+                  <li class="c-search-result-user__location">User Location Name</li>
                 </ul>
               </li>
             </ul>
@@ -114,69 +273,6 @@
       </section>
 
     </section>
-
-
-    <!-- ========================================================================================================================= -->
-
-    <!-- Naked HTML
-    <section>
-      <section></section>
-      <ul>
-        <li>
-          <a>
-            <img />
-            <p><mark>Firstname</mark> Surname</p>
-            <p>User location or <mark>data match</mark></p>
-          </a>
-        </li>
-      </ul>
-    </section>
-    -->
-    <!-- Classed HTML -->
-    <section class="c-lookup">
-      <section class="c-lookup__settings">
-
-      <!-- Form element with a figure -->
-        <div class="o-form-element-with-figure--reversed">
-          <span class="o-form-element-with-figure__figure"></span>
-          <label class="o-form-element-with-figure__body [ o-form-element-text ]">
-          <!-- Example contents -->
-            <input class="o-form-element-text__control" type="text" title="Label">
-            <span class="o-form-element-text__label">Label</span>
-          <!--/ Example contents -->
-          </label>
-        </div>
-      <!--/ Form element with a figure -->
-
-      </section>
-      <ul class="c-lookup__list">
-        <li class="c-lookup__list__item">
-          <a class="c-user-lookup-result">
-            <img class="c-user-lookup-result__figure--[TYPE]" />
-            <p class="c-user-lookup-result__name"><mark>Firstname</mark> Surname</p>
-            <p class="c-user-lookup-result__info">User location or <mark>data match</mark></p>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Option 2
-    <section>
-      <section></section>
-      <ul>
-        <li>
-          <article>
-            <a>
-              <img />
-              <h1><mark>Firstname</mark> Surname</h1>
-              <p>User location or <mark>data match</mark></p>
-            </a>
-          </article>
-        </li>
-      </ul>
-    </section>
-    -->
-
 
 
 
