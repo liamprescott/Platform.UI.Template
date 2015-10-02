@@ -1,0 +1,25 @@
+
+/**
+ * Basic form
+ */
+
+// Settings
+// Tools
+// Generic
+// Base
+// Objects
+// Components / modules
+// Utilities
+
+// Local settings
+$output-form-ui-classes: false !default;
+
+@if ($output-form-ui-classes == true) {
+
+  //  Decorator Class names that can be added to HTML elements
+
+  .c-form {
+    @include c-form;
+  }
+
+}

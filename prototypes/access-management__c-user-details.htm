@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+    <main class="c-user-details">
+      <div class="c-user-details__figure"></div>
+      <h1 class="c-user-detailsc-user-details__name">Firstname Surname</h1>
+      <p class="c-user-details__username"></p>
+      <p class="c-user-details__email"></p>
+
+      <!-- Default -->
+      <div class="c-user-details__details">
+        <ul class="c-user-details__locations">
+          <li class="c-user-details__location"></li>
+          <li class="c-user-details__location"></li>
+          <li class="c-user-details__location"></li>
+          <li class="c-user-details__location"></li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="c-user-details__actions">
+          <a class="c-user-details__trigger-reset" href="/">Send password reset email</a>
+          <a class="c-user-details__trigger-update--password" href="/">Change password</a>
+          <a class="c-user-details__trigger-update--email" href="/">Update<!--Add an--> email address</a>
+        </div>
+      </div>
+
+      <!-- Change Password -->
+      <form class="c-user-details__update--password"> <!-- This is NOT a standard form component -->
+        <fieldset class="c-user-details__update__fieldset">
+          <legend class="c-user-details__update__legend">Change password</legend>
+          <label class="o-form-password">
+            <input class="o-form-password__control" type="password" title="New password">
+            <span class="o-form-password__label">New password</span>
+          </label>
+          <label class="o-form-password">
+            <input class="o-form-password__control" type="password" title="Confirm password">
+            <span class="o-form-password__label">Confirm password</span>
+          </label>
+        </fieldset>
+        <div class="c-user-details__update__actions">
+          <button class="c-user-details__update__submit" type="submit" autocomplete="off"></button>
+          <a class="c-user-details__update__cancel" href="/">Cancel</a>
+        </div>
+      </form>
+
+      <!-- Add / Update email form -->
+      <form class="c-user-details__update--email"> <!-- This is NOT a standard form component -->
+        <fieldset class="c-user-details__update__fieldset">
+          <legend class="c-user-details__update__legend">Change password</legend>
+          <label class="o-form-email">
+            <input class="o-form-email__control" type="email" title="New email address">
+            <span class="o-form-email__label">New email address</span>
+          </label>
+          <label class="o-form-email">
+            <input class="o-form-email__control" type="email" title="Confirm email address">
+            <span class="o-form-email__label">Confirm email address</span>
+          </label>
+        </fieldset>
+        <div class="__update__actions">
+          <button class="__update__submit" type="submit" autocomplete="off"></button>
+          <a class="__update__cancel" href="/">Cancel</a>
+        </div>
+      </form>
+
+      <!-- Dialogue -->
+      <section class="c-user-details__dialog--[TYPE]"> <!-- success / fail -->
+        <img class="c-user-details__dialog__figure" src="/">
+        <h1 class="c-user-details__dialog__title">Message title</h1>
+        <button class="c-user-details__dialog__action-primary"></button>
+      </section>
+
+      <!-- Back -->
+      <a class="c-user-details__back" href="">Back</a>
+    </main>
+
+
+  </body>
+</html>

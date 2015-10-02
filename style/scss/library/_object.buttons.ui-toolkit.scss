@@ -2,15 +2,23 @@
 ///*------------------------------------
 //  #OBJECT : UI TOOLKIT : BUTTONS
 //  ------------------------------------*/
+
+// Settings
+// Tools
+// Generic
+// Base
+// Objects
 @import 'object.buttons';
+// Components / modules
+// Utilities
 
-
+// Local settings
 $output-button-ui-classes: false !default;
 
-///**
-// * Decorator Class names that can be added to HTML elements to make them buttons
-// */
 @if ($output-button-ui-classes == true) {
+
+  //  Decorator Class names that can be added to HTML elements
+
   .o-button--full {
     @include o-button--full;
   }

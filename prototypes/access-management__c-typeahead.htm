@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+  <head lang="en">
+    <meta charset="utf-8">
+    <title>Access Management : Component : Typeahead</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/style/css/.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/css/testbed.css">
+  </head>
+
+  <body>
+    <main>
+
+      <!-- ========================================================================================================================= -->
+
+      <!-- Naked HTML
+      <section>
+        // Settings / Terms
+        <form> // NOTE No need for a <fieldset> as only 1 form field
+          <div> // Media object (Form element with a figure)
+            <a></a>
+            <label>
+              <input type="search" title="Find a user">
+              <span>Find a user</span>
+            </label>
+          </div>
+          <button type="submit" autocomplete="off">Submit</button>
+        </form>
+
+        // Modal
+        <div>
+          <div class="__knock-out"></div>
+          <div class="__display">
+            <a class="__close">Close</a>
+            <fieldset class="__options [ radiolist ]">
+              ...
+            </fieldset>
+          </div>
+        </div>
+
+        // Suggestions (Results)
+        <ul>
+          <li>
+            <a>
+              <img />
+              <p><mark>Firstname</mark> Surname</p>
+              <p>User location or <mark>data match</mark></p>
+            </a>
+          </li>
+        </ul>
+      </section>
+      -->
+
+      <!-- Classed HTML -->
+      <section class="c-typeahead">
+        <form class="c-typeahead__settings">
+          <div class="c-typeahead__capture">
+            <a class="c-typeahead__capture__figure"></a>
+            <label class="c-typeahead__capture__body">
+              <input class="c-typeahead__capture__control" type="search" title="Find a user">
+              <span class="c-typeahead__capture__label">Find a user</span>
+            </label>
+          </div>
+
+          <!-- Search type modal pop-up -->
+          <div class="c-typeahead__search-type c-search-type-modal">
+            <div class="c-search-type-modal__knock-out"></div>
+            <div class="c-search-type-modal__display">
+              <a class="c-search-type-modal__close">Close</a>
+              <fieldset class="c-search-type-modal__options o-form-radiolist">
+                <legend class="c-search-type-modal__options__title o-form-radiolist__legend">Radio button list</legend>
+                <label class="o-form-radio">
+                  <input class="o-form-radio__control" type="radio" name="[]" title="Label">
+                  <span class="o-form-radio__label">Label</span>
+                  <span class="o-form-radio__faux"></span>
+                </label>
+                <label class="o-form-radio">
+                  <input class="o-form-radio__control" type="radio" name="[]" title="Label">
+                  <span class="o-form-radio__label">Label</span>
+                  <span class="o-form-radio__faux"></span>
+                </label>
+                <!-- etc... -->
+              </fieldset>
+              <!-- Option 2 (using 'object' decorator classes):
+              <fieldset class="c-search-type-modal__radiolist">
+                <legend class="c-search-type-modal__radiolist__legend">Radio button list</legend>
+                <label  class="c-search-type-modal__radio">
+                  <input class="c-search-type-modal__radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
+                  <span class="c-search-type-modal__radio__label">Label</span>
+                  <span class="c-search-type-modal__radio__faux"></span>
+                </label>
+                <label  class="c-search-type-modal__radio">
+                  <input class="c-search-type-modal__radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
+                  <span class="c-search-type-modal__radio__label">Label</span>
+                  <span class="c-search-type-modal__radio__faux"></span>
+                </label>
+              </fieldset>
+              -->
+            </div>
+          </div>
+
+          <button class"c-typeahead__submit" type="submit" autocomplete="off">Submit</button>
+          <!-- Default form element decorator classes :
+          <div class="o-form-with-figure--reversed">
+            <span class="o-form-with-figure__figure"></span>
+            <label class="o-form-with-figure__body [ o-form-text ]">
+              <input class="o-form-text__control" type="search" title="Label">
+              <span class="o-form-text__label">Label</span>
+            </label>
+          </div>
+          -->
+        </form>
+        <ul class="c-typeahead__suggestions">
+          <li class="c-typeahead__suggestion">
+            <a class="c-typeahead__suggestion__trigger">
+              <img class="c-typeahead__suggestion__figure--[TYPE]" />
+              <div class="c-typeahead__suggestion__body">
+                <p class="c-typeahead__suggestion__title"><mark>Firstname</mark> Surname</p>
+                <p class="c-typeahead__suggestion__info">User location or <mark>data match</mark></p>
+              </div>
+            </a>
+          </li>
+        </ul>
+          <!-- Option 2
+          <ul>
+            <li>
+              <article>
+                <a>
+                  <img />
+                  <h1><mark>Firstname</mark> Surname</h1>
+                  <p>User location or <mark>data match</mark></p>
+                </a>
+              </article>
+            </li>
+          </ul>
+          -->
+      </section>
+
+    </main>
+  </body>
+</html>

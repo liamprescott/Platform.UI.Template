@@ -53,139 +53,63 @@
 
       <form class="c-form" autocomplete="on">
         <!-- #Form > fieldset -->
-        <fieldset class="c-form__fieldset"> <!-- form__fieldset--[NAME] -->
+        <fieldset class="c-form__fieldset"> <!-- form__fieldset--[FIELDSET TITLE] -->
           <legend class="c-form__legend">Fieldset title</legend>
-          <!-- #Form items -->
 
           <!-- #Input type: Text -->
-          <!-- Naked html
-          <label>
-            <input type="text">
-            <span>Label</span>
-          </label>
-          -->
-          <!-- Classed html -->
-          <label class="o-form-text"> <!-- form__field--[NAME] -->
+          <label class="o-form-text">
             <input class="o-form-text__control" type="text" title="Label">
             <span class="o-form-text__label">Label</span>
           </label>
 
-
           <!-- #Input type: Tel -->
-          <!-- Naked html
-          <label>
-            <input type="tel">
-            <span>Label</span>
-          </label>
-          -->
-          <!-- Classed html -->
-          <label class="o-form-tel"> <!-- form__field--[NAME] -->
+          <label class="o-form-tel">
             <input class="o-form-tel__control" type="tel" title="Label">
             <span class="o-form-tel__label">Label</span>
           </label>
 
-
           <!-- #Input type: Email -->
-          <!-- Naked html
-          <label>
-            <input type="email">
-            <span>Label</span>
-          </label>
-          -->
-          <!-- Classed html -->
-          <label class="o-form-email"> <!-- form__field--[NAME] -->
+          <label class="o-form-email">
             <input class="o-form-email__control" type="email" title="Label">
             <span class="o-form-email__label">Label</span>
           </label>
 
-
           <!-- #Input type: Password -->
-          <!-- Naked html
-          <label>
-            <input type="password">
-            <span>Label</span>
-          </label>
-          -->
-          <!-- Classed html -->
-          <label class="o-form-password"> <!-- form__field--[NAME] -->
+          <label class="o-form-password">
             <input class="o-form-password__control" type="password" title="Label">
             <span class="o-form-password__label">Label</span>
           </label>
 
-
           <!-- #Input type: search -->
-          <!-- Naked html
-          <label>
-            <input type="search">
-            <span>Label</span>
-          </label>
-          -->
-          <!-- Classed html -->
-          <label class="o-form-search"> <!-- form__field--[NAME] -->
+          <label class="o-form-search">
             <input class="o-form-search__control" type="search" title="Label">
             <span class="o-form-search__label">Label</span>
           </label>
 
-
           <!-- #Input type: URL -->
-          <!-- Naked html
-          <label>
-            <input type="url">
-            <span>Label</span>
-          </label>
-          -->
-          <!-- Classed html -->
-          <label class="o-form-url"> <!-- form__field--[NAME] -->
+          <label class="o-form-url">
             <input class="o-form-url__control" type="url" title="Label">
             <span class="o-form-url__label">Label</span>
           </label>
 
-
           <!-- #Form element with an icon -->
-          <!-- e.g. Super search -->
-          <!-- e.g. -->
-          <!-- Naked HTML
-          <div>
-            <span></span>
-            <label>
-              <input type="text">
-              <span>Label</span>
-            </label>
-          </div>
-          -->
-          <!-- Classed HTML -->
           <!-- 1. Default -->
           <div class="o-form-element-with-figure">
             <span class="o-form-element-with-figure__figure"></span>
             <label class="o-form-element-with-figure__body">
-              <!-- ... -->
+              <!-- ...-->
             </label>
           </div>
           <!-- 1. Reversed -->
           <div class="o-form-element-with-figure--reversed">
             <span class="o-form-element-with-figure__figure"></span>
-            <label class="o-form-element-with-figure__body [ o-form-text ]">
+            <label class="o-form-element-with-figure__body">
               <!-- ... -->
             </label>
           </div>
 
-
           <!-- #Select list -->
-          <!-- Naked html
-          <label>
-            <span>Label</span>
-            <div>
-              <select>
-                <option selected></option>
-                <option></option>
-                <option></option>
-                <option></option>
-              </select>
-            <div>
-          </label>
-          -->
-          <!-- Classed html -->
-          <label class="o-form-select"> <!-- form__field--[NAME] -->
+          <label class="o-form-select">
             <span class="o-form-select__label">Label</span>
             <div class="o-form-select__select">
               <select class="o-form-select__control" title="Label">
@@ -197,140 +121,77 @@
             <div>
           </label>
 
-
           <!-- #Checkbox -->
-          <!-- Naked html
-          <label>
-            <input type="checkbox">
-            <span>Label</span>
-            <span></span>
-          </label>
-          -->
-          <!-- Classed html -->
-          <label class="o-form-checkbox"> <!-- form__field--[NAME] -->
+          <label class="o-form-checkbox">
             <input class="o-form-checkbox__control" type="checkbox" title="Label">
             <span class="o-form-checkbox__label">Label</span>
             <span class="o-form-checkbox__faux"><!-- faux --></span>
           </label>
 
-
           <!-- #Checkbox list -->
-          <!-- Naked html
-          <fieldset>
-            <legend>Checkbox list</legend>
-            <label>
-              <input type="checkbox">
-              <span>Label</span>
-              <span></span>
-            </label>
-            <label>
-              <input>
-              <span>Label</span>
-              <span></span>
-            </label>
-          </fieldset>
-          -->
-          <!-- Classed html -->
-          <fieldset class="o-form-checkboxlist"> <!-- form__field--[NAME] -->
+          <fieldset class="o-form-checkboxlist">
             <legend class="o-form-checkboxlist__legend">Checkbox list</legend>
-            <label class="o-form-checkboxlist__checkbox"> <!-- form__field--[NAME] -->
+            <label class="o-form-checkboxlist__checkbox">
               <input class="o-form-checkboxlist__checkbox__control" type="checkbox" title="Label">
               <span class="o-form-checkboxlist__checkbox__label">Label</span>
               <span class="o-form-checkboxlist__checkbox__faux"><!-- faux --></span>
             </label>
-            <label class="o-form-checkboxlist__checkbox"> <!-- form__field--[NAME] -->
+            <label class="o-form-checkboxlist__checkbox">
               <input class="o-form-checkboxlist__checkbox__control" type="checkbox" title="Label">
               <span class="o-form-checkboxlist__checkbox__label">Label</span>
               <span class="o-form-checkboxlist__checkbox__faux"><!-- faux --></span>
             </label>
           </fieldset>
-
 
           <!-- #Radiobutton list -->
-          <!-- Naked html
-          <fieldset>
-            <legend>Radio button list</legend>
-            <label>
-              <input type="radio">
-              <span>Label</span>
-              <span></span>
-            </label>
-            <label>
-              <input type="radio">
-              <span>Label</span>
-              <span></span>
-            </label>
-          <fieldset>
-          -->
-          <!-- Classed html -->
-          <fieldset class="o-form-radiolist"> <!-- form__field--[NAME] -->
+          <fieldset class="o-form-radiolist">
             <legend class="o-form-radiolist__legend">Radio button list</legend>
-            <label class="o-form-radio">  <!-- form__field--[NAME] -->
+            <label class="o-form-radio">
               <input class="o-form-radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
               <span class="o-form-radio__label">Label</span>
               <span class="o-form-radio__faux"><!-- faux --></span>
             </label>
-            <label class="o-form-radio">  <!-- form__field--[NAME] -->
+            <label class="o-form-radio">
               <input class="o-form-radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
               <span class="o-form-radio__label">Label</span>
               <span class="o-form-radio__faux"><!-- faux --></span>
             </label>
           </fieldset>
 
-
           <!-- #Toggle -->
-          <!-- Naked HTML
-          <label>
-            <input type="">
-            <span>Label</span>
-            <span></span>
-          </label>
-          -->
-          <!-- Classed HTML -->
           <label class="o-form-toggle">
             <input class="o-form-toggle__control" type="checkbox" title="Label">
             <span class="o-form-toggle__label">Label</span>
             <span class="o-form-toggle__faux"></span>
           </label>
 
-
           <!-- #Textarea -->
-          <!-- Naked html
-          <label>
-            <textarea></textarea>
-            <span>Label</span>
-          </label>
-          -->
-          <!-- Classed html -->
-          <label class="o-form-textarea">  <!-- form__field--[NAME] -->
+          <label class="o-form-textarea">
             <textarea class="o-form-textarea__control"></textarea>
             <span class="o-form-textarea__label">Label</span>
           </label>
 
-          <!--/ #Form items -->
-
         </fieldset>
         <!--/ #Form > fieldset -->
-
 
         <!--
          #Form actions
          -->
         <div class"c-form__actions">
-          <button class"c-form__submit" type="submit" autocomplete="off">Submit</button>
-          <button class"c-form__reset" type="reset" autocomplete="off">Reset</button>
+          <button class"o-form__submit" type="submit" autocomplete="off">Submit</button>
+          <button class"o-form__reset" type="reset" autocomplete="off">Reset</button>
         </div>
       </form>
 
       <!--
        #Form error states
        -->
-      <form class="[c-form]--has-error">
-        <span class="c-form__assist">Fieldset assistance</span>
+      <form class="[o-form]--has-error">
+        <span class="o-form__assist">Form assistance</span>
         <!-- Fieldset -->
-        <fieldset class="[c-form__fieldset]--has-error">
-          <legend>Fieldset title</legend>
-          <span class="c-form__fieldset__assist">Fieldset assistance</span>
+        <fieldset class="[o-form__fieldset]--has-error">
+          <legend class="o-form__legend">Fieldset title</legend>
+          <span class="o-form__fieldset__assist">Fieldset assistance</span>
           <!-- Form Element -->
           <label class="o-form-[TYPE]--has-error">
             <input class="o-form-[TYPE]__control">

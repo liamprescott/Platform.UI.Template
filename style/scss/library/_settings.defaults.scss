@@ -14,6 +14,7 @@
 $namespace-global: "abc-";
 $namespace-access-management: "acc-mgmt-";
 
+
 ///*------------------------------------
 //  # DEFAULT SETTINGS
 //  ------------------------------------*/
@@ -21,7 +22,13 @@ $namespace-access-management: "acc-mgmt-";
 //$default-border-radius-medium: 6px;
 //$default-border-radius-large: 10px;
 
+
+///*------------------------------------
+//  # FLAGS FOR OUTPUTTING UI CLASSES
+//  ------------------------------------*/
 //$output-button-ui-classes: true;
+//$output-form-ui-classes: true;
+
 
 ///*------------------------------------
 //  # SIZING / VERTICAL RHYTHM

@@ -2,21 +2,54 @@
   /**
    * Typeahead
    */
-
+   
   .c-typeahead {
-
     // Settings
     &__settings {}
 
-    // Search type
-    &__search-type {}
+      // Capture
+      &__capture {
 
-    // Submit button (Not visible on mobile!!...how)
-    &__submit {}
+        // Search type modal link / icon
+        &__figure {}
+
+        // Details
+        &__body {}
+
+          // Control
+          &__control {}
+
+          // Label
+          &__label {}
+      }
+
+      // Search type
+      &__search-type {}
+
+      // Submit button (Not visible on mobile!!...how)
+      &__submit {}
 
     // Suggestions
     &__suggestions {}
 
-      // Suggestion
-      &__suggestion {}
+      // Suggestion (Typeahead Result)
+      &__suggestion {
+        // Trigger / action link
+        &__trigger {}
+
+        // Figure / icon
+        &__figure {}
+
+        // Types of figure
+        &__figure--[TYPE] {}
+
+        // Details
+        &__body {}
+
+        // Title
+        &__title {}
+
+        // Info
+        &__info {}
+      }
   }

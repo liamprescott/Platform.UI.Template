@@ -12,122 +12,90 @@
 // Components / modules
 // Utilities
 
-///*
-//  INDEX:
-//  ------
-//  #BASE FORM CONSTRUCT
-//  #INDIVIDUAL FORM ELEMENTS
-//    #Input type: Text
-//    #Input type: Tel
-//    #Input type: Email
-//    #Input type: Password
-//    #Input type: Search
-//    #Input type: URL
-//    #Form element with a figure
-//    #Select list
-//    #Checkbox
-//    #Checkboxlist
-//    #Radiolist
-//      #Radio
-//    #Toggle
-//    #Textarea
-//  */
+// Local settings
+$output-form-element-ui-classes: false !default;
 
-///*------------------------------------
-//  #BASE FORM CONSTRUCT
-//  ------------------------------------*/
-.o-form {
-  @include o-form;
-}
+@if ($output-form-element-ui-classes == true) {
 
-///*------------------------------------
-//  #INDIVIDUAL FORM ELEMENTS
-//  ------------------------------------*/
-///*------------------------------------
-//  #Input type: Text
-//  ------------------------------------*/
-.o-form-element-text {
-  @include o-form-element-text;
-}
-///*------------------------------------
-//  #Input type: Tel
-//  ------------------------------------*/
-.o-form-element-tel {
-  @include o-form-element-tel;
-}
-///*------------------------------------
-//  #Input type: Email
-//  ------------------------------------*/
-.o-form-element-email {
-  @include o-form-element-email;
-}
-///*------------------------------------
-//  #Input type: Password
-//  ------------------------------------*/
-.o-form-element-password {
-  @include o-form-element-password;
-}
-///*------------------------------------
-//  #Input type: Search
-//  ------------------------------------*/
-.o-form-element-search {
-  @include o-form-element-search;
-}
-///*------------------------------------
-//  #Input type: URL
-//  ------------------------------------*/
-.o-form-element-url {
-  @include o-form-element-url;
-}
-///*------------------------------------
-//  #Form element with a figure
-//  ------------------------------------*/
-.o-form-element-with-figure {
-  @include o-form-element-with-figure;
-}
-.o-form-element-with-figure--reversed {
-  @include o-form-element-with-figure--reversed;
-}
-///*------------------------------------
-//  #Select list
-//  ------------------------------------*/
-.o-form-element-select {
-  @include o-form-element-select;
-}
-///*------------------------------------
-//  #Checkbox
-//  ------------------------------------*/
-.o-form-element-checkbox {
-  @include o-form-element-checkbox;
-}
-///*------------------------------------
-//  #Checkboxlist
-//  ------------------------------------*/
-.o-form-element-checkboxlist {
-  @include o-form-element-checkboxlist;
-}
-///*------------------------------------
-//  #Radiolist
-//  ------------------------------------*/
-.o-form-element-radiolist {
-  @include o-form-element-radiolist;
-}
-  ///*------------------------------------
-  //  #Radio
-  //  Radio controls can only exist in radio lists!!
-  //  ------------------------------------*/
-  .o-form-element-radio {
-    @include o-form-element-radio;
+  ///*
+  //  Decorator Class names that can be added to HTML elements
+  //
+  //  INDEX:
+  //  #Input type: Text
+  //  #Input type: Tel
+  //  #Input type: Email
+  //  #Input type: Password
+  //  #Input type: Search
+  //  #Input type: URL
+  //  #Form element with a figure
+  //  #Select list
+  //  #Checkbox
+  //  #Checkboxlist
+  //  #Radiolist
+  //    #Radio
+  //  #Toggle
+  //  #Textarea
+  //  */
+
+  //  #Input type: Text
+  .o-form-text {
+    @include o-form-text;
   }
-///*------------------------------------
-//  #Toggle
-//  ------------------------------------*/
-.o-form-element-toggle {
-  @include o-form-element-toggle;
-}
-///*------------------------------------
-//  #Textarea
-//  ------------------------------------*/
-.o-form-element-textarea {
-  @include o-form-element-textarea;
+  //  #Input type: Tel
+  .o-form-tel {
+    @include o-form-text;
+  }
+  //  #Input type: Email
+  .o-form-email {
+    @include o-form-text;
+  }
+  //  #Input type: Password
+  .o-form-password {
+    @include o-form-text;
+  }
+  //  #Input type: Search
+  .o-form-search {
+    @include o-form-text;
+  }
+  //  #Input type: URL
+  .o-form-url {
+    @include o-form-text;
+  }
+  //  #Form element with a figure
+  .o-form-element-with-figure {
+    @include o-form-element-with-figure;
+  }
+  .o-form-element-with-figure--reversed {
+    @include o-form-element-with-figure--reversed;
+  }
+  //  #Select list
+  .o-form-select {
+    @include o-form-select;
+  }
+  //  #Checkbox
+  .o-form-checkbox {
+    @include o-form-checkbox;
+  }
+  //  #Checkboxlist
+  .o-form-checkboxlist {
+    @include o-form-checkboxlist;
+  }
+  //  #Radiolist
+  .o-form-radiolist {
+    @include o-form-radiolist;
+  }
+    //  #Radio
+    //  Radio controls can only exist in radio lists!!
+    .o-form-radio {
+      @include o-form-radio;
+    }
+  //  #Toggle
+  .o-form-toggle {
+    @include o-form-toggle;
+  }
+  //  #Textarea
+  .o-form-textarea {
+    @include o-form-textarea;
+  }
+
 }

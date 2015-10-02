@@ -1,0 +1,22 @@
+
+
+/**
+ * Basic form
+ */
+
+@mixin c-form {
+  // Fieldset
+  &__fieldset {}
+
+  // Legend
+  &__legend {}
+
+  // Actions
+  &__actions {}
+
+    // Submit
+    &__submit {}
+
+    // Reset
+    &__reset {}
+}

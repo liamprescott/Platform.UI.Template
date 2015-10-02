@@ -15,27 +15,24 @@
 ///*
 //  INDEX:
 //  ------
-//  #BASE FORM CONSTRUCT
-//  #INDIVIDUAL FORM ELEMENTS
-//    #Input type: Text
-//    #Input type: Tel
-//    #Input type: Email
-//    #Input type: Password
-//    #Input type: Search
-//    #Input type: URL
-//    #Form element with a figure
-//    #Select list
-//    #Checkbox
-//    #Checkboxlist
-//    #Radiolist
-//      #Radio
-//    #Toggle
-//    #Textarea
+//  #Input type: Text
+//  //#Input type: Tel
+//  //#Input type: Email
+//  //#Input type: Password
+//  //#Input type: Search
+//  //#Input type: URL
+//  #Form element with a figure
+//  #Select list
+//  #Checkbox
+//  #Checkboxlist
+//  #Radiolist
+//    #Radio
+//  #Toggle
+//  #Textarea
 //  */
 
 
 //----------------------------------------
-//
 // TODO
 // Input / selectlist sizes
 // - default
@@ -47,112 +44,101 @@
 // - dark
 // - light
 //
+// Form actions
+// - Submit
+// - Reset
+// - ?
+//----------------------------------------
+
+
+//----------------------------------------
+// NOTE
+// Can use extension as resultant localisation in
+// the output CSS should be OK
 //----------------------------------------
 
 
 ///*------------------------------------
-//  #BASE FORM CONSTRUCT
-//  ------------------------------------*/
-@mixin o-form {
-  // Fieldset
-  &__fieldset {}
-
-  // Legend
-  &__legend {}
-
-  // Actions
-  &__actions {}
-
-    // Submit
-    &__submit {}
-
-    // Reset
-    &__reset {}
-}
-
-
-
-///*------------------------------------
-//  #INDIVIDUAL FORM ELEMENTS
-//  ------------------------------------*/
-
-///*------------------------------------
 //  #Input type: Text
 //  ------------------------------------*/
-@mixin o-form-element-text {
+@mixin o-form-text {
   // Control
   &__control {}
 
   // Label
   &__label {}
 }
+// As a series of placeholders
+//%o-form-text { color:#111; }
+//%o-form-text__control { color:#222; }
+//%o-form-text__label { color:#222; }
 
 
 ///*------------------------------------
 //  #Input type: Tel
 //  ------------------------------------*/
-@mixin o-form-element-tel {
-  // Control
-  &__control {}
-
-  // Label
-  &__label {}
-}
+//@mixin o-form-tel {
+//  // Control
+//  &__control {}
+//
+//  // Label
+//  &__label {}
+//}
 
 
 ///*------------------------------------
 //  #Input type: Email
 //  ------------------------------------*/
-@mixin o-form-element-email {
-  // Control
-  &__control {}
-
-  // Label
-  &__label {}
-}
+//@mixin o-form-email {
+//  // Control
+//  &__control {}
+//
+//  // Label
+//  &__label {}
+//}
 
 
 ///*------------------------------------
 //  #Input type: Password
 //  ------------------------------------*/
-@mixin o-form-element-password {
-  // Control
-  &__control {}
-
-  // Label
-  &__label {}
-}
+//@mixin o-form-password {
+//  // Control
+//  &__control {}
+//
+//  // Label
+//  &__label {}
+//}
 
 
 ///*------------------------------------
 //  #Input type: Search
 //  ------------------------------------*/
-@mixin o-form-element-search {
-  // Control
-  &__control {}
-
-  // Label
-  &__label {}
-}
+//@mixin o-form-search {
+//  // Control
+//  &__control {}
+//
+//  // Label
+//  &__label {}
+//}
 
 
 ///*------------------------------------
 //  #Input type: URL
 //  ------------------------------------*/
-@mixin o-form-element-url {
-  // Control
-  &__control {}
-
-  // Label
-  &__label {}
-}
+//@mixin o-form-url {
+//  // Control
+//  &__control {}
+//
+//  // Label
+//  &__label {}
+//}
 
 
 ///*------------------------------------
 //  #Form element with a figure
 //  ------------------------------------*/
 
-@mixin o-form-element-figure {
+@mixin o-form-figure {
   &__figure {
     display:block;
     width:50px;
@@ -162,17 +148,17 @@
 
 @mixin o-form-element-with-figure {
   @include o-media-match-height;
-  @include o-form-element-figure;
+  @include o-form-figure;
 }
 @mixin o-form-element-with-figure--reversed {
-  @include o-media-match-height--rtl("o-form-element-with-figure");
+  @include o-media-match-height--rtl("o-form-with-figure");
 }
 
 
 ///*------------------------------------
 //  #Select list
 //  ------------------------------------*/
-@mixin o-form-element-select {
+@mixin o-form-select {
   // Label
   &__label {}
 
@@ -192,7 +178,7 @@
 ///*------------------------------------
 //  #Checkbox
 //  ------------------------------------*/
-@mixin o-form-element-checkbox {
+@mixin o-form-checkbox {
   // Control
   &__control {}
 
@@ -207,7 +193,7 @@
 ///*------------------------------------
 //  #Checkboxlist
 //  ------------------------------------*/
-@mixin o-form-element-checkboxlist {
+@mixin o-form-checkboxlist {
   // Legend
   &__legend { }
 
@@ -228,7 +214,7 @@
 ///*------------------------------------
 //  #Radiolist
 //  ------------------------------------*/
-@mixin o-form-element-radiolist {
+@mixin o-form-radiolist {
   // Legend
   &__legend {}
 }
@@ -236,7 +222,7 @@
   //  #Radio
   //  Radio controls can only exist in radio lists!!
   //  ------------------------------------*/
-  @mixin o-form-element-radio {
+  @mixin o-form-radio {
     // Control
     &__control {}
 
@@ -251,7 +237,7 @@
 ///*------------------------------------
 //  #Toggle
 //  ------------------------------------*/
-@mixin o-form-element-toggle {
+@mixin o-form-toggle {
   // Control
   &__control {}
 
@@ -266,7 +252,7 @@
 ///*------------------------------------
 //  #Textarea
 //  ------------------------------------*/
-@mixin o-form-element-textarea {
+@mixin o-form-textarea {
   // Control
   &__control {}
 

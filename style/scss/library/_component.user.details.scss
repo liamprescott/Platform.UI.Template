@@ -1,0 +1,73 @@
+
+/**
+ * User details
+ */
+.c-user-details {
+
+  // Figure
+  &__figure {}
+
+  // Name
+  &__name {}
+
+  // Core details
+  &__details {}
+
+    // Locations
+    &__locations {}
+
+      // Location
+      &__location {}
+
+    // Actions
+    &__actions {}
+
+      // Trigger Reset
+      &__trigger-reset {}
+      // Update Password
+      &__trigger-update--password {}
+      // Update Email
+      &__trigger-update--email {}
+
+  // Update Forms
+  &__update {
+    // NOTE forms don't have shared '...__update' class name
+    // These target common elements
+    // Fieldset
+    &__fieldset {}
+
+      // Form legend
+      &__legend {}
+
+    // Form Actions
+    &__actions {}
+
+      // Submit
+      &__submit {}
+
+      // Cancel
+      &__cancel {}
+  }
+
+  // Update Password
+  &__update--password {}
+
+  // Update Email
+  &__update--email {}
+
+
+  // Dialogue
+  &__dialogue {
+
+    //Figure
+    &__figure {}
+
+    //Title
+    &__title {}
+
+    // Action
+    &__action-primary {}
+  }
+
+
+}

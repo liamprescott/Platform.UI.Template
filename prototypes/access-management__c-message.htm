@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Access Management : Component : Message</title>
+    <meta name="description" content="Access Manangement : Component : Message">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" src="/style/css/main.css">
+  </head>
+  <body>
+    <main>
+
+      <!-- Message / dialog -/ Types: /- notification / question / feedback / question / confirmation / success / failure / warn / halt -->
+      <section class="c-dialog--[TYPE]">
+        <!-- Icon -->
+        <img class="c-dialog__figure" src="/">
+
+        <!-- Title -->
+        <h1 class="c-dialog__title">Message title</h1>
+
+        <!-- Dialogue Contents -->
+        <p class="c-dialog__detail"><p><!-- Detail -->
+        <h2 class="c-dialog__subtitle"><h2><!-- Subtitle -->
+        <p class="c-dialog__detail"><p><!-- Detail -->
+
+        <!-- Actions (Standard) -->
+        <button class="c-dialog__action-primary"></button>
+        <a class="c-dialog__action-link"></a>
+
+        <!-- Actions (Decision) -->
+        <div class="c-dialog__action-decision">
+          <button class="c-dialog__action-decision__yes">Yes</button>
+          <button class="c-dialog__action-decision__no">No</button>
+        </div>
+
+        <!-- Back -->
+        <a class="c-dialog__back" href="">Back</a>
+        <!-- Close -->
+        <a class="c-dialog__close" href="">Close</a><!-- If we're not modal don't need to close!....if we are modal needs to be here in the DOM (assuming that the main dialogue container forms modal body) -->
+      </section>
+
+    </main>
+  </body>
+
+</html>

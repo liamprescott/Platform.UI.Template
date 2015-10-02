@@ -11,6 +11,9 @@
       // Figure (open search-type-modal)
       &__settings__figure {}
 
+      // Modes (ALL, Location, User etc)
+      &__settings__figure--[MODE]
+
       // Body
       &__settings__body {}
 

@@ -1,0 +1,27 @@
+
+
+/**
+ * Search Type Modal Display
+ */
+
+.c-search-type-modal {
+
+  // Knockout background
+  // - Need a physical element (as opposed to a pseudo element) because need to attach a close 'click' event
+  &__knock-out {}
+
+  // Modal Display
+  &__display {}
+
+    // Close link
+    &__close {}
+
+    // Options
+    &__options {}
+
+      // Radiobutton list
+      // - These simply use default styles / object classnames
+      &__options__title {
+        display:none;
+      }
+}
