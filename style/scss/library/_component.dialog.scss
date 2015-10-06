@@ -1,0 +1,43 @@
+
+/**
+ * Login
+ */
+
+// Core dialogue
+.c-dialog {
+  // Figure
+  &__figure {}
+  
+  // Title
+  &__title {}
+  
+  // Subtitle
+  &__subtitle {}
+  
+  // Detail
+  &__detail {}
+  
+  // Action
+  &__action-primary {}
+
+  // Link
+  &__action-link {}
+
+  // Decision actions
+  &__action-decision {
+    // Yes
+    &__yes {}
+
+    // No
+    &__no {}
+  }
+
+  // Back link
+  &__back-link {}
+  
+  // Close link
+  &__close-link {}
+}
+
+// Dialogue types
+.c-dialog--[TYPE] {}
