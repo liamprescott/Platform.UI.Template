@@ -1,22 +1,48 @@
 
 
-  /**
-   * Search
-   */
+/**
+  * Search
+  */
   .c-search {
 
     // Criteria
     &__settings {}
 
-      // Figure (open search-type-modal)
-      &__settings__figure {}
-
-      // Modes (ALL, Location, User etc)
-      &__settings__figure--[MODE]
-
-      // Body
-      &__settings__body {}
 
     // Results
     &__results {}
+  }
+
+
+
+  /**
+   * Search Result
+   */
+  .c-search-result-user {
+    // Trigger
+    &__trigger {}
+
+      // Image
+      &__image {}
+
+      // Name
+      &__name {}
+
+      // Details
+      &__details {}
+
+        // User name
+        &__username {}
+
+        // Email address
+        &__email {}
+
+        // Locations
+        &__locations {}
+
+          // Location list
+          &__location-list {}
+
+            // Location
+            &__location {}
   }

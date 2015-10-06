@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 
   <head lang="en">
@@ -10,7 +10,8 @@
   </head>
 
   <body>
-    <main>
+
+    <main class="c-search">
 
       <!-- ========================================================================================================================= -->
 
@@ -53,23 +54,23 @@
       -->
 
       <!-- Classed HTML -->
-      <section class="c-typeahead">
+      <section class="c-search__settings c-typeahead">
         <form class="c-typeahead__settings">
           <div class="c-typeahead__capture">
-            <a class="c-typeahead__capture__figure"></a>
+            <a class="c-typeahead__capture__figure--[MODE]"></a>
             <label class="c-typeahead__capture__body">
               <input class="c-typeahead__capture__control" type="search" title="Find a user">
               <span class="c-typeahead__capture__label">Find a user</span>
             </label>
           </div>
 
-          <!-- Search type modal pop-up -->
-          <div class="c-typeahead__search-type c-search-type-modal">
-            <div class="c-search-type-modal__knock-out"></div>
-            <div class="c-search-type-modal__display">
-              <a class="c-search-type-modal__close">Close</a>
-              <fieldset class="c-search-type-modal__options o-form-radiolist">
-                <legend class="c-search-type-modal__options__title o-form-radiolist__legend">Radio button list</legend>
+          <!-- Modal: Search type pop-up -->
+          <div class="c-typeahead__search-category o-modal-search-category">
+            <div class="o-modal-search-category__knock-out"></div>
+            <div class="o-modal-search-category__display">
+              <a class="o-modal-search-category__close">Close</a>
+              <fieldset class="o-modal-search-category__options">
+                <legend class="o-modal-search-category__options__title">Search by</legend>
                 <label class="o-form-radio">
                   <input class="o-form-radio__control" type="radio" name="[]" title="Label">
                   <span class="o-form-radio__label">Label</span>
@@ -82,39 +83,18 @@
                 </label>
                 <!-- etc... -->
               </fieldset>
-              <!-- Option 2 (using 'object' decorator classes):
-              <fieldset class="c-search-type-modal__radiolist">
-                <legend class="c-search-type-modal__radiolist__legend">Radio button list</legend>
-                <label  class="c-search-type-modal__radio">
-                  <input class="c-search-type-modal__radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
-                  <span class="c-search-type-modal__radio__label">Label</span>
-                  <span class="c-search-type-modal__radio__faux"></span>
-                </label>
-                <label  class="c-search-type-modal__radio">
-                  <input class="c-search-type-modal__radio__control" type="radio" name="[LIST IDENTIFIER]" title="Label">
-                  <span class="c-search-type-modal__radio__label">Label</span>
-                  <span class="c-search-type-modal__radio__faux"></span>
-                </label>
-              </fieldset>
-              -->
             </div>
           </div>
 
+          <!-- Submit / go button -->
           <button class"c-typeahead__submit" type="submit" autocomplete="off">Submit</button>
-          <!-- Default form element decorator classes :
-          <div class="o-form-with-figure--reversed">
-            <span class="o-form-with-figure__figure"></span>
-            <label class="o-form-with-figure__body [ o-form-text ]">
-              <input class="o-form-text__control" type="search" title="Label">
-              <span class="o-form-text__label">Label</span>
-            </label>
-          </div>
-          -->
         </form>
+
+        <!-- Suggestions -->
         <ul class="c-typeahead__suggestions">
-          <li class="c-typeahead__suggestion">
+          <li class="c-typeahead__suggestion--[CATEGORY]">
             <a class="c-typeahead__suggestion__trigger">
-              <img class="c-typeahead__suggestion__figure--[TYPE]" />
+              <img class="c-typeahead__suggestion__figure" />
               <div class="c-typeahead__suggestion__body">
                 <p class="c-typeahead__suggestion__title"><mark>Firstname</mark> Surname</p>
                 <p class="c-typeahead__suggestion__info">User location or <mark>data match</mark></p>
@@ -122,20 +102,136 @@
             </a>
           </li>
         </ul>
-          <!-- Option 2
-          <ul>
-            <li>
-              <article>
-                <a>
-                  <img />
-                  <h1><mark>Firstname</mark> Surname</h1>
-                  <p>User location or <mark>data match</mark></p>
-                </a>
-              </article>
-            </li>
-          </ul>
-          -->
+
+        <!-- FUTURE -->
+            <!-- User --
+            <section class="c-typeahead__suggestions--user">
+              <h1>Users <span>00+ Results</span></h1>
+              <ul class="c-typeahead__suggestions__list">
+                <li class="c-typeahead__suggestion--user">
+                  <a class="c-typeahead__suggestion__trigger">
+                    <img class="c-typeahead__suggestion__figure" />
+                    <div class="c-typeahead__suggestion__body">
+                      <p class="c-typeahead__suggestion__title"><mark>Firstname</mark> Surname</p>
+                      <p class="c-typeahead__suggestion__info">User location or <mark>data match</mark></p>
+                    </div>
+                  </a>
+                </li>
+                <li class="c-typeahead__more">
+                  <a class="c-typeahead__more__trigger">View more users</a>
+                </li>
+              </ul>
+            </section>
+
+            <!-- User name --
+            <section class="c-typeahead__suggestions--user-name">
+              <h1>User name <span>00+ Results</span></h1>
+              <ul class="c-typeahead__suggestions__list">
+                <li class="c-typeahead__suggestion--user-name">
+                  <a class="c-typeahead__suggestion__trigger">
+                    <img class="c-typeahead__suggestion__figure" />
+                    <div class="c-typeahead__suggestion__body">
+                      <p class="c-typeahead__suggestion__title"><mark>User</mark>name</p>
+                      <p class="c-typeahead__suggestion__info">Firstname Surname</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="c-typeahead__more">
+                  <a class="c-typeahead__more__trigger">View more users</a>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Locations --
+            <section class="c-typeahead__suggestions--locations">
+              <h1>Locations <span>00+ Results</span></h1>
+              <ul class="c-typeahead__suggestions__list">
+                <li class="c-typeahead__suggestion--location">
+                  <a class="c-typeahead__suggestion__trigger">
+                    <img class="c-typeahead__suggestion__figure" />
+                    <div class="c-typeahead__suggestion__body">
+                      <p class="c-typeahead__suggestion__title"><mark>Au</mark>di Manchester</p>
+                      <p class="c-typeahead__suggestion__info">4 users</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="c-typeahead__more">
+                  <a class="c-typeahead__more__trigger">View more locations</a>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Email --
+            <section class="c-typeahead__suggestions--email">
+              <h1>Email address <span>00+ Results</span></h1>
+              <ul class="c-typeahead__suggestions__list">
+                <li class="c-typeahead__suggestion--email">
+                  <a class="c-typeahead__suggestion__trigger">
+                    <img class="c-typeahead__suggestion__figure" />
+                    <div class="c-typeahead__suggestion__body">
+                      <p class="c-typeahead__suggestion__title">tom.smith@<mark>Au</mark>di.co.uk</p>
+                      <p class="c-typeahead__suggestion__info">Firstname Surname</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="c-typeahead__more">
+                  <a class="c-typeahead__more__trigger">View more email addresses</a>
+                </li>
+              </ul>
+            </section>
+            -->
+
+        <!--/ FUTURE -->
+
       </section>
+
+
+      <!-- Search results -->
+      <section class="c-search__results">
+      
+        <!-- User result -->
+        <article class="c-search-result-user">
+          <a class="c-search-result-user__trigger" href="/">
+            <img class="c-search-result-user__figure" />
+            <div class="c-search-result-user__body">
+              <h1 class="c-search-result-user__name"><mark>Firstname</mark> Surname</h1>
+              <ul class="c-search-result-user__details">
+                <li class="c-search-result-user__username">User_Name</li>
+                <li class="c-search-result-user__email"><mark>firstname</mark>.lastname@web-address.co.uk</li>
+                <li class="c-search-result-user__locations">
+                  <ul class="c-search-result-user__location-list">
+                    <li class="c-search-result-user__location">User Location Name</li>
+                    <li class="c-search-result-user__location">User <mark>Location Name</mark></li>
+                    <li class="c-search-result-user__location">User Location Name</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </article>
+
+        <!-- FUTURE -->
+            <!-- Location result --
+            <article class="c-search-result-location">
+                <img class="c-search-result-location__figure" />
+                <div class="c-search-result-location__body">
+                  <h1 class="c-search-result-location__name"><mark>Audi</mark> Manchester</h1>
+                  <ul class="c-search-result-location__details">
+                    <li class="c-search-result-location__address">123 Road Name, Area Name, City or Town, A12 3BC</li>
+                    <li class="c-search-result-location__users">
+                      <ul class="c-search-result-location__user-list">
+                        <li class="c-search-result-location__user"><a class="c-search-result-location__user__trigger" href="/">Firstname Surname</a></li>
+                        <li class="c-search-result-location__user"><a class="c-search-result-location__user__trigger" href="/">Firstname Surname</a></li>
+                        <li class="c-search-result-location__user"><a class="c-search-result-location__user__trigger" href="/">Firstname Surname</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+            </article>
+        <!--/ FUTURE -->
+      
+      </section>
+
 
     </main>
   </body>

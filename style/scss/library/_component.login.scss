@@ -9,7 +9,16 @@
   // Title
   &__title {}
   // Form
-  &__form {}
+  &__form {
+    // Fieldset
+    &__fieldset {}
+    // Legend
+    &__legend {}
+    // Actions
+    &__actions {}
+      // Submit (Decorate?)
+      // Forgot (Decorate?)
+  }
   // Back link
   &__back-link {}
 }
