@@ -3,11 +3,11 @@
 //  ------------------------------------*/
 
 // Settings
-@import 'settings.defaults';
-@import 'settings.colours';
+@import '_settings.defaults.scss';
+@import '_settings.colours.scss';
 
 // Tools
-@import 'tools.buttons';
+@import '_tools.buttons.scss';
 
 // Generic
 // Base
